@@ -1,9 +1,9 @@
 **Dedicated Server (Multiplayer) Tutorial**
  
  
-**Step 1** – Delete any existing “**slimpatch-common.toml**” file in your single-player config folder.
-**Step 2** – To choose a skin type (modern or fantasy), edit the “**slimpatch-common.toml**” file both in your multiplayer world’s config folder and in your .minecraft instance. (Modern is the default skin type)
-**Step 3** – Run the server!
+**Step 1** – Delete any existing “**slimpatch-common.toml**” file in your single-player config folder.  
+**Step 2** – To choose a skin type (modern or fantasy), edit the “**slimpatch-common.toml**” file both in your multiplayer world’s config folder and in your .minecraft instance. (Modern is the default skin type)  
+**Step 3** – Run the server!  
  
 **Issues** 
  
