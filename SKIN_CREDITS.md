@@ -7,7 +7,6 @@ The mod is non-commercial and shared for free.
 All authors have been contacted when possible, with permissions confirmed where available.  
 If you would like your skin removed or credited differently, please contact me.
 
----
 
 ## Credits
 
