@@ -15,64 +15,64 @@ Credits
 Thanks to all the amazing creators whose work made this mod possible.
  
  
-PigtailTHUNDER - https://www.minecraftskins.com/profile/4785822/pigtailthunder
+**PigtailTHUNDER** - https://www.minecraftskins.com/profile/4785822/pigtailthunder
  
-OhStarryy - https://www.minecraftskins.com/profile/3986962/ohstarryy
+**OhStarryy** - https://www.minecraftskins.com/profile/3986962/ohstarryy
  
-MysteryMaiden - https://www.minecraftskins.com/profile/7136357/mysterymaiden
+**MysteryMaiden** - https://www.minecraftskins.com/profile/7136357/mysterymaiden
  
-sugariest - https://www.minecraftskins.com/profile/8605185/sugariest
+**sugariest** - https://www.minecraftskins.com/profile/8605185/sugariest
  
-Cleora - https://www.minecraftskins.com/profile/3625549/Cleora
+**Cleora** - https://www.minecraftskins.com/profile/3625549/Cleora
  
-gloomberry - https://www.minecraftskins.com/profile/8684453/gloomberry
+**gloomberry** - https://www.minecraftskins.com/profile/8684453/gloomberry
  
-Xersycore - https://www.minecraftskins.com/profile/8617355/xersycore
+**Xersycore** - https://www.minecraftskins.com/profile/8617355/xersycore
  
-SoftWetStar - https://www.minecraftskins.com/profile/8690467/softwetstar
+**SoftWetStar** - https://www.minecraftskins.com/profile/8690467/softwetstar
  
-hypnotise - https://www.minecraftskins.com/profile/4062482/hypnotise
+**hypnotise** - https://www.minecraftskins.com/profile/4062482/hypnotise
  
-Dant0ny - https://www.minecraftskins.com/profile/8629618/Dant0ny
+**Dant0ny** - https://www.minecraftskins.com/profile/8629618/Dant0ny
  
-ImNixu - https://www.minecraftskins.com/profile/8351238/ImNixu
+**ImNixu** - https://www.minecraftskins.com/profile/8351238/ImNixu
  
-Levirosepettals    
-Kyoshiii  
-Baeaawhwwj   
-moonlandia  
-AmexxMc  
-xXPMPxSkinsXx  
-RoyalPeachMilk  
-ducklamp514  
-GwadaMonki    
-CelticWerewolf  
-godscucci   
-yawnly  
-Panda67  
-squeemishjellybeans    
-Kaxiva  
-mochhi  
-pxrrfume  
-ItsMandy  
-ImJustHereAgain  
-Sammyemoji  
-Sumrae  
-XxAutumn  
-THlMK  
-wallflxwer  
-Jxydxns  
-SunnyShift  
-SorryFromAoi  
-moonyyyyy  
-katebeanie  
-WoodenSoupLadle  
-Jingles
-stxrrynight   
-Seliny  
-Streetlxmp  
-StarMein  
-JessaMoon  
+**Levirosepettals**  
+**Kyoshiii**  
+**Baeaawhwwj**  
+**moonlandia**  
+**AmexxMc**  
+**xXPMPxSkinsXx**  
+**RoyalPeachMilk**  
+**ducklamp514**  
+**GwadaMonki**  
+**CelticWerewolf**  
+**godscucci**  
+**yawnly**  
+**Panda67**  
+**squeemishjellybeans**  
+**Kaxiva**  
+**mochhi**  
+**pxrrfume**  
+**ItsMandy**  
+**ImJustHereAgain**  
+**Sammyemoji**  
+**Sumrae**  
+**XxAutumn**  
+**THlMK**  
+**wallflxwer**  
+**Jxydxns**  
+**SunnyShift**  
+**SorryFromAoi**  
+**moonyyyyy**  
+**katebeanie**  
+**WoodenSoupLadle**  
+**Jingles**  
+**stxrrynight**  
+**Seliny**  
+**Streetlxmp**  
+**StarMein**  
+**JessaMoon**
  
  
 Thank you again to every creator who helped make Villagers Reborn possible.
