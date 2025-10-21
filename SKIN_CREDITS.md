@@ -12,7 +12,8 @@ If you would like your skin removed or credited differently, please contact me.
 
 Thanks to all the amazing creators whose work made this mod possible. 
 
-### Linked profiles
+### Linked profiles  
+
 
 **[PigtailTHUNDER](https://www.minecraftskins.com/profile/4785822/pigtailthunder)**  
 
