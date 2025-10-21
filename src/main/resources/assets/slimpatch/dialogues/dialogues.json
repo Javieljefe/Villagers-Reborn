@@ -1,0 +1,536 @@
+{
+  "Intro": {
+    "friendly": {
+      "lines": [
+        "Hey there!",
+        "Oh, hi!",
+        "You look cheerful today!",
+        "It’s a great day to talk, isn’t it?",
+        "Glad you stopped by!"
+      ],
+      "fail": [
+        "Oh... sorry, I’m a bit distracted today.",
+        "Not in the mood to talk right now."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "What do you want now?",
+        "Can’t you see I’m busy?",
+        "Ugh... it’s you.",
+        "Make it quick.",
+        "What is it this time?"
+      ],
+      "fail": [
+        "Go away before I lose my patience.",
+        "Didn’t I tell you to leave me alone?"
+      ]
+    },
+    "shy": {
+      "lines": [
+        "Oh... hi.",
+        "Um... hi there.",
+        "I wasn’t expecting you.",
+        "Heh... you startled me.",
+        "Hi... I guess."
+      ],
+      "fail": [
+        "Oh... I didn’t mean to talk.",
+        "Sorry, I... need a moment."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "Hey! Always good to see someone still standing strong.",
+        "Another day, another quest!",
+        "Let’s make today count!",
+        "No mobs scare us, right?",
+        "Standing strong as always, huh?"
+      ],
+      "fail": [
+        "Not the time for small talk.",
+        "Let’s focus, no distractions."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "Yeah, hello.",
+        "You again... great.",
+        "What now?",
+        "Didn’t we talk already?",
+        "Let’s make this quick."
+      ],
+      "fail": [
+        "Ugh... not now.",
+        "I’m in no mood for this."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "Got something valuable for me?",
+        "You didn’t come empty-handed, right?",
+        "Let’s talk trade... or treasure.",
+        "Hope you brought some gold.",
+        "Business first, talk later."
+      ],
+      "fail": [
+        "No deal today.",
+        "Come back when you’ve got something shiny."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "Didn’t think I’d run into anyone out here.",
+        "You light up the village.",
+        "You look amazing today.",
+        "I was hoping you’d show up.",
+        "My heart skipped a beat seeing you."
+      ],
+      "fail": [
+        "Not feeling it today, sorry.",
+        "Let’s just... not talk right now."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "Greetings. What brings you here?",
+        "Ah, knowledge seeker, welcome.",
+        "Wisdom begins with curiosity.",
+        "A calm mind opens every door.",
+        "The path ahead is clearer than you think."
+      ],
+      "fail": [
+        "Now’s not the time for words.",
+        "Even wisdom needs silence sometimes."
+      ]
+    }
+  },
+
+  "Friendly": {
+    "friendly": {
+      "lines": [
+        "Always nice to chat with you!",
+        "You’ve got such a good spirit.",
+        "You make the village feel warmer.",
+        "You always know what to say.",
+        "You bring good vibes."
+      ],
+      "fail": [
+        "Sorry, not in the mood right now.",
+        "Let’s talk later, okay?"
+      ]
+    },
+    "mean": {
+      "lines": [
+        "Friendly, huh? Didn’t expect that.",
+        "Are you trying to be nice for once?",
+        "That’s... surprisingly kind of you.",
+        "You think that’ll change anything?",
+        "Keep your fake smile to yourself."
+      ],
+      "fail": [
+        "Don’t push your luck.",
+        "Nice words won’t work this time."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "Oh... thanks.",
+        "That was really sweet of you.",
+        "Heh... you’re too kind.",
+        "I’m not used to compliments.",
+        "You are making me blush."
+      ],
+      "fail": [
+        "Oh... I didn’t mean to offend.",
+        "Sorry... I’ll just stay quiet."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "Thanks, friend! Let’s keep fighting strong.",
+        "Good spirits make good warriors.",
+        "You’ve got my back, right?",
+        "Good vibes fuel fights.",
+        "Courage is better shared."
+      ],
+      "fail": [
+        "We don’t have time for talk.",
+        "Stay sharp, this isn’t the place."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "Yeah, yeah... you’re alright.",
+        "Don’t make it weird.",
+        "Guess you’re not that bad.",
+        "Fine, I’ll admit, you’re decent.",
+        "You’re okay, I guess."
+      ],
+      "fail": [
+        "Leave me alone for now.",
+        "You’re being too nice, it’s annoying."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "Kind words don’t pay the bills.",
+        "You got any coin to go with that smile?",
+        "Talk is cheap, treasure isn’t.",
+        "Flattery won’t get you discounts.",
+        "We’ll see if you’re still friendly after trading."
+      ],
+      "fail": [
+        "No deals without gold.",
+        "Talk later. After business."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "You really know how to make me smile.",
+        "Stop being so charming!",
+        "Looking sharp today.",
+        "You talk like that to everyone?",
+        "You really mean that?"
+      ],
+      "fail": [
+        "You’re sweet, but not today.",
+        "Maybe another time, alright?"
+      ]
+    },
+    "wise": {
+      "lines": [
+        "Kindness is the greatest strength.",
+        "Your words reflect your heart.",
+        "You speak with sense. Not many do.",
+        "Heh, wisdom in your words. I like that.",
+        "Glad to know there’s reason left in the world."
+      ],
+      "fail": [
+        "Even kind words can fall flat.",
+        "The moment for talk has passed."
+      ]
+    }
+  },
+
+  "Mean": {
+    "friendly": {
+      "lines": [
+        "That’s not like you!",
+        "Hey, what’s with the attitude?",
+        "You okay? You sound upset.",
+        "Wow... didn’t expect that from you.",
+        "You need a hug, not anger."
+      ],
+      "fail": [
+        "That wasn’t very nice.",
+        "You’re acting strange today."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "Finally showing your true colors?",
+        "Ha! I like your spirit.",
+        "Keep that tone, and we’ll get along.",
+        "You call that mean? Try harder.",
+        "Don’t mess with me, I bite back."
+      ],
+      "fail": [
+        "You call that tough? Pathetic.",
+        "You’re just embarrassing yourself."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "Oh... did I say something wrong?",
+        "I didn’t mean to upset you.",
+        "Please don’t be mad...",
+        "I’m sorry if I annoyed you.",
+        "Let’s just forget it."
+      ],
+      "fail": [
+        "I shouldn’t have said that.",
+        "That came out wrong..."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "Watch your words.",
+        "If you want to fight, I’m ready.",
+        "You’ve got guts, I’ll give you that.",
+        "I respect boldness, not rudeness.",
+        "Careful, words cut deeper than swords."
+      ],
+      "fail": [
+        "You’ve gone too far.",
+        "Save that energy for battle."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "Now you’re speaking my language.",
+        "Finally someone who gets it.",
+        "Took you long enough to get serious.",
+        "Let’s just grumble together.",
+        "Fine, I’ll allow the attitude."
+      ],
+      "fail": [
+        "You call that anger? Please.",
+        "That wasn’t even close."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "Insults won’t lower the price.",
+        "Anger won’t fill your pockets.",
+        "You talk tough, but can you pay?",
+        "Insults cost extra.",
+        "Next insult costs double."
+      ],
+      "fail": [
+        "You’ll pay extra for that tone.",
+        "Try that again, and we’re done."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "Wow... that was harsh.",
+        "I didn’t think you’d talk to me like that.",
+        "You’re lucky I find that passion... attractive.",
+        "That’s one fiery way to flirt.",
+        "Even your anger looks cute."
+      ],
+      "fail": [
+        "That was too far.",
+        "I didn’t like that at all."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "Anger blinds the wise.",
+        "Harsh words echo louder than silence.",
+        "Even tempers can destroy peace.",
+        "Speak with thought, not fury.",
+        "The calm win more battles than the loud."
+      ],
+      "fail": [
+        "Your words lacked wisdom.",
+        "Silence would have suited you better."
+      ]
+    }
+  },
+
+"Joke": {
+    "friendly": {
+      "lines": [
+        "Haha! You’re hilarious.",
+        "You really know how to make me laugh.",
+        "You should be a comedian.",
+        "That was a good one!",
+        "You really lighten the mood."
+      ],
+      "fail": [
+        "That one didn’t land.",
+        "You’ve told better jokes!"
+      ]
+    },
+    "mean": {
+      "lines": [
+        "That’s... actually funny.",
+        "Don’t quit your day job.",
+        "You’re trying too hard.",
+        "Heh, not bad for once.",
+        "Okay, you got me to laugh."
+      ],
+      "fail": [
+        "That was painful to hear.",
+        "You’re not funny, stop trying."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "Hehe... stop it.",
+        "That was funny.",
+        "You always make me giggle.",
+        "You’re silly, you know that?",
+        "Heh... thanks for cheering me up."
+      ],
+      "fail": [
+        "Oh... I didn’t get it.",
+        "Heh... that was awkward."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "Haha! Needed that laugh.",
+        "Even warriors need humor.",
+        "Good joke — now back to business.",
+        "You’ve got guts and a good sense of humor.",
+        "I’ll laugh now, fight later."
+      ],
+      "fail": [
+        "Not the best timing for jokes.",
+        "Let’s stay focused, alright?"
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "Was that supposed to be funny?",
+        "I’ve heard worse jokes.",
+        "You’re ridiculous.",
+        "Fine, I’ll admit... that was okay.",
+        "Don’t expect me to laugh again."
+      ],
+      "fail": [
+        "You’re wasting my time.",
+        "Not funny. At all."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "If I laugh, do I owe you?",
+        "You charge for jokes too?",
+        "Haha! Got any jokes about treasure?",
+        "Keep joking, I might give you a discount.",
+        "You laugh, I profit. Deal?"
+      ],
+      "fail": [
+        "Jokes don’t make profit.",
+        "I only laugh for gold."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "You’re so funny, it’s unfair.",
+        "Stop making me smile so much.",
+        "You’re adorable when you try to joke.",
+        "You could charm anyone with that humor.",
+        "Flirting through laughter, huh?"
+      ],
+      "fail": [
+        "Heh... that wasn’t very charming.",
+        "Maybe stick to smiling instead."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "Laughter is the best medicine.",
+        "Humor clears the mind.",
+        "Even wisdom enjoys a good joke.",
+        "A smile opens more doors than gold.",
+        "You make the world lighter with that joke."
+      ],
+      "fail": [
+        "That joke missed its meaning.",
+        "Even wisdom can’t save that punchline."
+      ]
+    }
+  },
+
+  "Flirt": {
+    "friendly": {
+      "lines": [
+        "Haha, stop it, you!",
+        "You’re making me blush!",
+        "You’re too funny!",
+        "You’re quite the charmer, huh?",
+        "I’ll take that as a compliment."
+      ],
+      "fail": [
+        "Oh, stop... that’s not working.",
+        "You’re trying too hard."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "Flirting won’t get you anywhere.",
+        "You’re not my type.",
+        "Ha, nice try.",
+        "You done embarrassing yourself?",
+        "You wish."
+      ],
+      "fail": [
+        "You call that flirting? Pathetic.",
+        "That was painful to watch."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "Oh... uh... thanks.",
+        "Y-you really mean that?",
+        "I don’t know what to say...",
+        "You’re making me nervous.",
+        "Heh... you’re sweet."
+      ],
+      "fail": [
+        "Oh... I’m sorry, I just... can’t.",
+        "You’re making this awkward..."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "You’re bold, I like that.",
+        "Takes courage to flirt with me.",
+        "You’ve got nerve, I’ll give you that.",
+        "Keep that confidence, it suits you.",
+        "I like someone who takes risks."
+      ],
+      "fail": [
+        "You’re bold, but not convincing.",
+        "Maybe next time, hero."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "Ugh... stop it.",
+        "You’re unbelievable.",
+        "Are you done yet?",
+        "Hmph... whatever.",
+        "I guess that was... decent."
+      ],
+      "fail": [
+        "You’re annoying me now.",
+        "That was terrible."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "Flirting won’t lower my prices.",
+        "You trying to charm a discount out of me?",
+        "Sweet words, empty pockets.",
+        "Maybe if you buy me something shiny.",
+        "Love doesn’t pay rent, you know."
+      ],
+      "fail": [
+        "No discount for bad flirting.",
+        "Try again when your wallet’s heavier."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "You have my attention, darling.",
+        "You really know how to talk to me.",
+        "You’re dangerously charming.",
+        "Careful, or I might fall for you.",
+        "You always make my heart race."
+      ],
+      "fail": [
+        "Oh... that didn’t feel right.",
+        "Maybe save that one for another time."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "Flattery is the art of fools and poets.",
+        "Even the wise can fall for kind words.",
+        "Charm is fleeting; truth lasts longer.",
+        "Your words are kind, but do you mean them?",
+        "Every smile hides a story."
+      ],
+      "fail": [
+        "Wisdom warns me against such charm.",
+        "Try honesty next time."
+      ]
+    }
+  }
+}

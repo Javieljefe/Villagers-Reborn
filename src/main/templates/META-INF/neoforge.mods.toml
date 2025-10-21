@@ -1,0 +1,38 @@
+# This is the NeoForge mods.toml file for Villagers Reborn
+# It defines how the mod is loaded and provides metadata shown in the Mods menu.
+
+modLoader="javafml" #mandatory
+loaderVersion="[2,)" #mandatory - minimum version of FML/NeoForge required
+
+license="All Rights Reserved"
+
+[[mods]] #mandatory
+modId="slimpatch" #mandatory - this must match @Mod("slimpatch") in your main class
+version="1.0.0" #mandatory
+displayName="Villagers Reborn" #mandatory
+authors="JaviC" #optional
+
+# A short description shown in the Mods list
+description='''
+Replaces the vanilla villager model with player-like humans (Steve/Alex style).
+Features gender support (male/female) and persistent randomized skins.
+'''
+
+# Optional homepage or issue tracker links
+#displayURL="https://modrinth.com/mod/villagers-reborn"
+#issueTrackerURL="https://github.com/yourname/villagers-reborn/issues"
+#logoFile="logo.png"
+
+[[dependencies.slimpatch]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.186,)" # NeoForge 1.21.1 or later
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.slimpatch]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1,)"
+    ordering="NONE"
+    side="BOTH"

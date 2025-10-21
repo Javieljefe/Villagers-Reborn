@@ -1,0 +1,148 @@
+{
+  "male_click": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:male/male_click1", "stream": false },
+      { "name": "slimpatch:male/male_click2", "stream": false },
+      { "name": "slimpatch:male/male_click3", "stream": false },
+      { "name": "slimpatch:male/male_click4", "stream": false },
+      { "name": "slimpatch:male/male_click5", "stream": false },
+      { "name": "slimpatch:male/male_click6", "stream": false }
+    ]
+  },
+  "female_click": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:female/female_click1", "stream": false },
+      { "name": "slimpatch:female/female_click2", "stream": false },
+      { "name": "slimpatch:female/female_click3", "stream": false },
+      { "name": "slimpatch:female/female_click4", "stream": false },
+      { "name": "slimpatch:female/female_click5", "stream": false },
+      { "name": "slimpatch:female/female_click6", "stream": false }
+    ]
+  },
+  "villager.male.reaction.positive": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:male/positive_1", "stream": false },
+      { "name": "slimpatch:male/positive_2", "stream": false },
+      { "name": "slimpatch:male/positive_3", "stream": false },
+      { "name": "slimpatch:male/positive_4", "stream": false },
+      { "name": "slimpatch:male/positive_5", "stream": false }
+    ]
+  },
+  "villager.male.reaction.negative": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:male/negative_1", "stream": false },
+      { "name": "slimpatch:male/negative_2", "stream": false },
+      { "name": "slimpatch:male/negative_3", "stream": false },
+      { "name": "slimpatch:male/negative_4", "stream": false },
+      { "name": "slimpatch:male/negative_5", "stream": false }
+    ]
+  },
+  "villager.female.reaction.positive": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:female/positive_1", "stream": false },
+      { "name": "slimpatch:female/positive_2", "stream": false },
+      { "name": "slimpatch:female/positive_3", "stream": false },
+      { "name": "slimpatch:female/positive_4", "stream": false },
+      { "name": "slimpatch:female/positive_5", "stream": false }
+    ]
+  },
+  "villager.female.reaction.negative": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:female/negative_1", "stream": false },
+      { "name": "slimpatch:female/negative_2", "stream": false },
+      { "name": "slimpatch:female/negative_3", "stream": false },
+      { "name": "slimpatch:female/negative_4", "stream": false },
+      { "name": "slimpatch:female/negative_5", "stream": false }
+    ]
+  },
+  "male_hurt": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:male/male_hurt1", "stream": false },
+      { "name": "slimpatch:male/male_hurt2", "stream": false },
+      { "name": "slimpatch:male/male_hurt3", "stream": false },
+      { "name": "slimpatch:male/male_hurt4", "stream": false }
+    ]
+  },
+  "female_hurt": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:female/female_hurt1", "stream": false },
+      { "name": "slimpatch:female/female_hurt2", "stream": false },
+      { "name": "slimpatch:female/female_hurt3", "stream": false },
+      { "name": "slimpatch:female/female_hurt4", "stream": false }
+    ]
+  },
+  "male_death": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:male/male_death", "stream": false }
+    ]
+  },
+  "female_death": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:female/female_death", "stream": false }
+    ]
+  },
+  "illager.male.ambient": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:male/illager/ambient_1", "stream": false },
+      { "name": "slimpatch:male/illager/ambient_2", "stream": false },
+      { "name": "slimpatch:male/illager/ambient_3", "stream": false },
+      { "name": "slimpatch:male/illager/ambient_4", "stream": false },
+      { "name": "slimpatch:male/illager/ambient_5", "stream": false }
+    ]
+  },
+  "illager.male.hurt": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:male/illager/hurt_1", "stream": false },
+      { "name": "slimpatch:male/illager/hurt_2", "stream": false },
+      { "name": "slimpatch:male/illager/hurt_3", "stream": false },
+      { "name": "slimpatch:male/illager/hurt_4", "stream": false },
+      { "name": "slimpatch:male/illager/hurt_5", "stream": false }
+    ]
+  },
+  "illager.male.death": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:male/illager/death_1", "stream": false },
+      { "name": "slimpatch:male/illager/death_2", "stream": false }
+    ]
+  },
+  "illager.female.ambient": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:female/illager/ambient_1", "stream": false },
+      { "name": "slimpatch:female/illager/ambient_2", "stream": false },
+      { "name": "slimpatch:female/illager/ambient_3", "stream": false },
+      { "name": "slimpatch:female/illager/ambient_4", "stream": false },
+      { "name": "slimpatch:female/illager/ambient_5", "stream": false }
+    ]
+  },
+  "illager.female.hurt": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:female/illager/hurt_1", "stream": false },
+      { "name": "slimpatch:female/illager/hurt_2", "stream": false },
+      { "name": "slimpatch:female/illager/hurt_3", "stream": false },
+      { "name": "slimpatch:female/illager/hurt_4", "stream": false },
+      { "name": "slimpatch:female/illager/hurt_5", "stream": false }
+    ]
+  },
+  "illager.female.death": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:female/illager/death_1", "stream": false },
+      { "name": "slimpatch:female/illager/death_2", "stream": false }
+    ]
+  }
+}

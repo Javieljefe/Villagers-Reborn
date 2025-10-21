@@ -1,0 +1,10 @@
+{
+  "item.slimpatch.male_villager_spawn_egg": "Male Villager Spawn Egg",
+  "item.slimpatch.female_villager_spawn_egg": "Female Villager Spawn Egg",
+
+  "entity.slimpatch.pillager": "Pillager",
+  "entity.slimpatch.vindicator": "Vindicator",
+  "entity.slimpatch.evoker": "Evoker",
+  "entity.slimpatch.witch": "Witch",
+  "entity.slimpatch.wandering_trader": "Wandering Trader"
+}
