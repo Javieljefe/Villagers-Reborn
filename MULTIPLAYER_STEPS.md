@@ -1,4 +1,4 @@
-**Dedicated Server (Multiplayer) Tutorial**
+# **Dedicated Server (Multiplayer) Tutorial**
  
  
 **Step 1** – Delete any existing “**slimpatch-common.toml**” file in your single-player config folder.  
