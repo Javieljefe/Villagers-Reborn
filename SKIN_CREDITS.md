@@ -2,7 +2,7 @@
 
 This file lists all known authors of the Minecraft skins included in the mod.
 
-All included skins belong to their original creators on [Skindex](https://www.minecraftskins.com/).  
+All included skins belong to their original creators on **[Skindex](https://www.minecraftskins.com/)**.  
 The mod is non-commercial and shared for free.  
 All authors have been contacted when possible, with permissions confirmed where available.  
 If you would like your skin removed or credited differently, please contact me.
