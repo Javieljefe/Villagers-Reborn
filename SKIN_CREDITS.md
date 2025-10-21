@@ -38,7 +38,6 @@ Dant0ny - https://www.minecraftskins.com/profile/8629618/Dant0ny
 ImNixu - https://www.minecraftskins.com/profile/8351238/ImNixu
  
 mariteo 
-Gsantos7  
 Levirosepettals    
 Kyoshiii  
 Baeaawhwwj   
