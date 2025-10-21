@@ -9,13 +9,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class HumanVillagerSounds {
 
-    // 🔹 Registro diferido para sonidos
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(Registries.SOUND_EVENT, "slimpatch");
 
-    // ========================================================
-    // Clicks básicos
-    // ========================================================
     public static final DeferredHolder<SoundEvent, SoundEvent> MALE_CLICK =
             SOUND_EVENTS.register("male_click",
                     () -> SoundEvent.createVariableRangeEvent(
@@ -26,9 +22,6 @@ public class HumanVillagerSounds {
                     () -> SoundEvent.createVariableRangeEvent(
                             ResourceLocation.fromNamespaceAndPath("slimpatch", "female_click")));
 
-    // ========================================================
-    // Reacciones (masculino)
-    // ========================================================
     public static final DeferredHolder<SoundEvent, SoundEvent> MALE_REACTION_POSITIVE =
             SOUND_EVENTS.register("villager.male.reaction.positive",
                     () -> SoundEvent.createVariableRangeEvent(
@@ -39,9 +32,6 @@ public class HumanVillagerSounds {
                     () -> SoundEvent.createVariableRangeEvent(
                             ResourceLocation.fromNamespaceAndPath("slimpatch", "villager.male.reaction.negative")));
 
-    // ========================================================
-    // Reacciones (femenino)
-    // ========================================================
     public static final DeferredHolder<SoundEvent, SoundEvent> FEMALE_REACTION_POSITIVE =
             SOUND_EVENTS.register("villager.female.reaction.positive",
                     () -> SoundEvent.createVariableRangeEvent(
@@ -52,9 +42,6 @@ public class HumanVillagerSounds {
                     () -> SoundEvent.createVariableRangeEvent(
                             ResourceLocation.fromNamespaceAndPath("slimpatch", "villager.female.reaction.negative")));
 
-    // ========================================================
-    // Sonidos de daño y muerte
-    // ========================================================
     public static final DeferredHolder<SoundEvent, SoundEvent> MALE_HURT =
             SOUND_EVENTS.register("male_hurt",
                     () -> SoundEvent.createVariableRangeEvent(
@@ -75,9 +62,6 @@ public class HumanVillagerSounds {
                     () -> SoundEvent.createVariableRangeEvent(
                             ResourceLocation.fromNamespaceAndPath("slimpatch", "female_death")));
 
-    // ========================================================
-    // Helpers
-    // ========================================================
     public static SoundEvent maleClick() {
         return MALE_CLICK.get();
     }
@@ -118,7 +102,6 @@ public class HumanVillagerSounds {
         return FEMALE_DEATH.get();
     }
 
-    // 🔹 Llamada desde SlimPatch.java
     public static void register(IEventBus eventBus) {
         SOUND_EVENTS.register(eventBus);
     }

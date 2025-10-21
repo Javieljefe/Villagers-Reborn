@@ -7,7 +7,6 @@ import java.util.Map;
 
 public class VillagerPersonalityIcons {
 
-    // Nombres visibles en la GUI
     public static final Map<VillagerPersonality, String> NAMES = Map.ofEntries(
             Map.entry(VillagerPersonality.FRIENDLY, "Friendly"),
             Map.entry(VillagerPersonality.MEAN, "Mean"),
@@ -19,7 +18,6 @@ public class VillagerPersonalityIcons {
             Map.entry(VillagerPersonality.WISE, "Wise")
     );
 
-    // Iconos (carpeta: assets/slimpatch/textures/gui/personalities/)
     public static final Map<VillagerPersonality, ResourceLocation> ICONS = Map.ofEntries(
             Map.entry(VillagerPersonality.FRIENDLY, ResourceLocation.fromNamespaceAndPath("slimpatch", "textures/gui/personalities/personality_friendly.png")),
             Map.entry(VillagerPersonality.MEAN, ResourceLocation.fromNamespaceAndPath("slimpatch", "textures/gui/personalities/personality_mean.png")),

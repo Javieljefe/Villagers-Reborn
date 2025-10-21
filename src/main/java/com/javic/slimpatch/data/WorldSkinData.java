@@ -5,23 +5,12 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.saveddata.SavedData;
 
-/**
- * Almacena el tema global de skins (Modern o Fantasy) a nivel de mundo.
- * Persiste entre sesiones y se sincroniza automáticamente a todos los clientes.
- * 
- * 🔸 Incluye un flag "guiShown" para asegurar que la GUI de selección
- *     de skins solo se muestra una vez en toda la historia del mundo.
- */
 public class WorldSkinData extends SavedData {
 
-    private String skinTheme = ""; // vacío → fuerza GUI en mundos nuevos
+    private String skinTheme = "";
     private boolean guiShown = false;
 
     public WorldSkinData() {}
-
-    // ============================================================
-    // 🧩 CARGA / GUARDADO NBT
-    // ============================================================
 
     public static WorldSkinData load(CompoundTag tag, HolderLookup.Provider registries) {
         WorldSkinData data = new WorldSkinData();
@@ -37,10 +26,6 @@ public class WorldSkinData extends SavedData {
         return tag;
     }
 
-    // ============================================================
-    // 🌍 ACCESO GLOBAL
-    // ============================================================
-
     public static WorldSkinData get(ServerLevel level) {
         return level.getDataStorage().computeIfAbsent(
                 new SavedData.Factory<>(WorldSkinData::new, WorldSkinData::load),
@@ -48,14 +33,10 @@ public class WorldSkinData extends SavedData {
         );
     }
 
-    // ============================================================
-    // 🎨 GET / SET
-    // ============================================================
-
     public void setTheme(String theme) {
         if (theme == null || theme.isEmpty()) return;
         this.skinTheme = theme;
-        this.setDirty(); // marcar para guardar
+        this.setDirty();
     }
 
     public String getTheme() {
@@ -66,16 +47,10 @@ public class WorldSkinData extends SavedData {
         return skinTheme != null && !skinTheme.isEmpty();
     }
 
-    // ============================================================
-    // 🧩 FLAG GUI
-    // ============================================================
-
-    /** Devuelve true si la GUI ya se mostró alguna vez en este mundo */
     public boolean isGuiShown() {
         return guiShown;
     }
 
-    /** Marca la GUI como mostrada permanentemente */
     public void setGuiShown(boolean shown) {
         this.guiShown = shown;
         this.setDirty();

@@ -16,7 +16,7 @@ public class ModItems {
             ITEMS.register("male_villager_spawn_egg",
                     () -> new GenderedVillagerEggItem(
                             ModEntities.MALE_VILLAGER.get(),
-                            true, // 👈 masculino
+                            true,
                             new Item.Properties()
                     ));
 
@@ -24,7 +24,7 @@ public class ModItems {
             ITEMS.register("female_villager_spawn_egg",
                     () -> new GenderedVillagerEggItem(
                             ModEntities.FEMALE_VILLAGER.get(),
-                            false, // 👈 femenino
+                            false,
                             new Item.Properties()
                     ));
 }

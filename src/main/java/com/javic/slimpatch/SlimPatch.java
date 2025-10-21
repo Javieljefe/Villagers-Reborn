@@ -64,7 +64,6 @@ public class SlimPatch {
 
         modEventBus.addListener(this::commonSetup);
 
-        // 🔹 El config ahora se guarda globalmente en /config/, no en serverconfig/
         modContainer.registerConfig(ModConfig.Type.COMMON, SlimPatchConfig.SERVER_SPEC);
 
         if (net.neoforged.fml.loading.FMLEnvironment.dist.isClient()) {

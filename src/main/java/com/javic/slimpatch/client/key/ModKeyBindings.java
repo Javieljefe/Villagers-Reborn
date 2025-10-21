@@ -22,10 +22,10 @@ public class ModKeyBindings {
     @SubscribeEvent
     public static void onRegisterKeys(RegisterKeyMappingsEvent event) {
         OPEN_DIALOGUE = new KeyMapping(
-                "key." + SlimPatch.MODID + ".open_dialogue", // nombre interno
+                "key." + SlimPatch.MODID + ".open_dialogue",
                 InputConstants.Type.KEYSYM,
-                GLFW.GLFW_KEY_R, // Tecla R por defecto
-                "key.categories." + SlimPatch.MODID // categoría en controles
+                GLFW.GLFW_KEY_R,
+                "key.categories." + SlimPatch.MODID
         );
         event.register(OPEN_DIALOGUE);
     }
@@ -38,10 +38,8 @@ public class ModKeyBindings {
             if (player != null && mc.hitResult != null) {
                 if (mc.hitResult.getType() == net.minecraft.world.phys.HitResult.Type.ENTITY) {
                     if (((net.minecraft.world.phys.EntityHitResult) mc.hitResult).getEntity() instanceof Villager villager) {
-                        // 🔹 Marca inicio de diálogo en el manager
                         DialogueManager.startDialogue(villager, player);
 
-                        // 🔹 Abre la pantalla de diálogo
                         mc.setScreen(new VillagerDialogueScreen(villager));
                     }
                 }

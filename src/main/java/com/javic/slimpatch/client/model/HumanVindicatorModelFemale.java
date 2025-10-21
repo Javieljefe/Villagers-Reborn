@@ -8,11 +8,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.monster.Vindicator;
 import net.minecraft.world.item.Items;
 
-/**
- * Modelo femenino para Human Vindicator.
- * 🔹 Basado en FemaleVillagerModel.
- * 🔹 Añade animaciones más suaves de combate cuerpo a cuerpo (hacha).
- */
 public class HumanVindicatorModelFemale<T extends Vindicator> extends HumanoidModel<T> {
 
     public static final ModelLayerLocation LAYER_LOCATION =
@@ -26,13 +21,9 @@ public class HumanVindicatorModelFemale<T extends Vindicator> extends HumanoidMo
     }
 
     public static LayerDefinition createBodyLayer() {
-        // Usa la misma geometría base del modelo femenino de aldeano
         return FemaleVillagerModel.createBodyLayer();
     }
 
-    // ============================================================
-    // 🪓 Animaciones de ataque con hacha (más suaves)
-    // ============================================================
     @Override
     public void setupAnim(T entity, float limbSwing, float limbSwingAmount,
                           float ageInTicks, float netHeadYaw, float headPitch) {
@@ -40,7 +31,6 @@ public class HumanVindicatorModelFemale<T extends Vindicator> extends HumanoidMo
         super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
 
         if (entity.isAggressive() && entity.isHolding(Items.IRON_AXE)) {
-            // Movimiento más controlado y fluido
             this.rightArm.xRot = (float) Math.toRadians(-95);
             this.rightArm.yRot = (float) Math.toRadians(5);
             this.leftArm.xRot = (float) Math.toRadians(-25);

@@ -12,16 +12,11 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
-/**
- * 🔹 Paquete para aplicar cambios de relación entre jugador y aldeano.
- * Ahora incluye el resultado "success" calculado en el cliente para mantener
- * sincronización perfecta entre texto mostrado y reacción (partículas/sonido).
- */
 public class RelationshipPacket implements CustomPacketPayload {
 
     private final int entityId;
     private final String option;
-    private final boolean success; // 🔹 nuevo campo sincronizado
+    private final boolean success;
 
     public RelationshipPacket(int entityId, String option, boolean success) {
         this.entityId = entityId;
@@ -29,9 +24,6 @@ public class RelationshipPacket implements CustomPacketPayload {
         this.success = success;
     }
 
-    // ===============================
-    // Payload setup
-    // ===============================
     public static final ResourceLocation ID =
             ResourceLocation.fromNamespaceAndPath(SlimPatch.MODID, "relationship");
     public static final Type<RelationshipPacket> TYPE = new Type<>(ID);
@@ -42,13 +34,13 @@ public class RelationshipPacket implements CustomPacketPayload {
     private static void encode(FriendlyByteBuf buf, RelationshipPacket packet) {
         buf.writeVarInt(packet.entityId);
         buf.writeUtf(packet.option);
-        buf.writeBoolean(packet.success); // 🔹 añadimos success al stream
+        buf.writeBoolean(packet.success);
     }
 
     private static RelationshipPacket decode(FriendlyByteBuf buf) {
         int entityId = buf.readVarInt();
         String option = buf.readUtf();
-        boolean success = buf.readBoolean(); // 🔹 leemos success
+        boolean success = buf.readBoolean();
         return new RelationshipPacket(entityId, option, success);
     }
 
@@ -57,9 +49,6 @@ public class RelationshipPacket implements CustomPacketPayload {
         return TYPE;
     }
 
-    // ===============================
-    // Handle (server side)
-    // ===============================
     public static void handle(RelationshipPacket msg, IPayloadContext ctx) {
         ctx.enqueueWork(() -> {
             if (!(ctx.player() instanceof ServerPlayer player)) return;
@@ -68,7 +57,6 @@ public class RelationshipPacket implements CustomPacketPayload {
             Entity entity = level.getEntity(msg.entityId);
 
             if (entity instanceof MaleVillagerEntity male) {
-                // 🔹 Aplicar cambio con el mismo resultado que vio el cliente
                 male.applyRelationshipChange(msg.option, msg.success);
             } else if (entity instanceof FemaleVillagerEntity female) {
                 female.applyRelationshipChange(msg.option, msg.success);

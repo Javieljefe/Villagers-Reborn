@@ -24,7 +24,6 @@ public class HumanWanderingTraderModelFemale<T extends LivingEntity> extends Hum
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition root = meshdefinition.getRoot();
 
-        // Cabeza
         root.addOrReplaceChild("head",
                 CubeListBuilder.create().texOffs(0, 0)
                         .addBox(-4.0F, -8.0F, -4.0F,
@@ -36,7 +35,6 @@ public class HumanWanderingTraderModelFemale<T extends LivingEntity> extends Hum
 
         root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.ZERO);
 
-        // Cuerpo con detalle femenino
         PartDefinition body = root.addOrReplaceChild("body",
                 CubeListBuilder.create().texOffs(16, 16)
                         .addBox(-4.0F, 0.0F, -2.0F,
@@ -60,7 +58,6 @@ public class HumanWanderingTraderModelFemale<T extends LivingEntity> extends Hum
 
         root.addOrReplaceChild("jacket", CubeListBuilder.create(), PartPose.ZERO);
 
-        // Brazos
         root.addOrReplaceChild("right_arm",
                 CubeListBuilder.create().texOffs(40, 16)
                         .addBox(-2.0F, -2.0F, -2.0F,
@@ -79,7 +76,6 @@ public class HumanWanderingTraderModelFemale<T extends LivingEntity> extends Hum
                                 3.0F, 12.0F, 4.0F, new CubeDeformation(0.25F)),
                 PartPose.offset(5.0F, 2.0F, 0.0F));
 
-        // Piernas
         root.addOrReplaceChild("right_leg",
                 CubeListBuilder.create().texOffs(0, 16)
                         .addBox(-2.0F, 0.0F, -2.0F,

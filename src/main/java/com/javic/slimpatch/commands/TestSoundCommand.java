@@ -23,16 +23,14 @@ public class TestSoundCommand {
         try {
             ServerPlayer player = ctx.getSource().getPlayerOrException();
 
-            // Obtenemos el evento desde HumanVillagerSounds
             SoundEvent sound = HumanVillagerSounds.maleClick();
 
             if (sound == null) {
                 ctx.getSource().sendFailure(
-                    Component.literal("⚠️ Error: SoundEvent 'male_click' no está registrado."));
+                    Component.literal("Error: SoundEvent 'male_click' no está registrado."));
                 return 0;
             }
 
-            // 🔊 reproducir sonido de prueba
             player.playNotifySound(
                 sound,
                 SoundSource.NEUTRAL,
@@ -41,7 +39,7 @@ public class TestSoundCommand {
             );
 
             ctx.getSource().sendSuccess(
-                () -> Component.literal("✅ Reproduciendo sonido slimpatch:male_click"), false);
+                () -> Component.literal("Reproduciendo sonido slimpatch:male_click"), false);
 
         } catch (CommandSyntaxException e) {
             ctx.getSource().sendFailure(

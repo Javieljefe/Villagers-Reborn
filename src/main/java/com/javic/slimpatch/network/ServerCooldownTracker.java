@@ -18,27 +18,18 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.UUID;
 
-/**
- * ============================================================
- * 🔹 ServerCooldownTracker
- * ============================================================
- * - ÚNICA fuente de decremento de cooldowns (1 s por segundo real).
- * - Los clientes ya no aplican su propio tick; sólo muestran los valores.
- * - Envía actualizaciones al jugador en diálogo cuando cambian.
- * - Usa VillagerCooldownsStorage como almacenamiento global persistente.
- */
 public class ServerCooldownTracker {
 
     private static int tickCounter = 0;
 
     public static void init() {
         NeoForge.EVENT_BUS.register(ServerCooldownTracker.class);
-        SlimPatch.LOGGER.info("[SlimPatch] 🔄 ServerCooldownTracker registrado en NeoForge.");
+        SlimPatch.LOGGER.info("[SlimPatch] ServerCooldownTracker registrado en NeoForge.");
     }
 
     @SubscribeEvent
     public static void onServerStarted(ServerStartedEvent event) {
-        SlimPatch.LOGGER.info("[SlimPatch] 🟢 ServerCooldownTracker iniciado correctamente.");
+        SlimPatch.LOGGER.info("[SlimPatch] ServerCooldownTracker iniciado correctamente.");
     }
 
     @SubscribeEvent
@@ -47,7 +38,7 @@ public class ServerCooldownTracker {
         if (server == null) return;
 
         tickCounter++;
-        if (tickCounter % 20 != 0) return; // 1 vez por segundo (20 ticks)
+        if (tickCounter % 20 != 0) return;
 
         Map<UUID, Map<String, Integer>> allCooldowns = new HashMap<>(VillagerCooldownsStorage.getAll());
         if (allCooldowns.isEmpty()) return;
@@ -91,9 +82,6 @@ public class ServerCooldownTracker {
         }
     }
 
-    /**
-     * Busca una entidad Villager por UUID en todos los niveles cargados.
-     */
     private static Villager findVillagerByUUID(MinecraftServer server, UUID uuid) {
         if (server == null) return null;
         for (ServerLevel level : server.getAllLevels()) {

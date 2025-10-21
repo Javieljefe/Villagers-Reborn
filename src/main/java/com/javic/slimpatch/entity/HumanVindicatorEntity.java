@@ -46,9 +46,6 @@ public class HumanVindicatorEntity extends Vindicator {
         builder.define(DATA_GENDER, "male");
     }
 
-    // ============================================================
-    // 🎨 Skins y género
-    // ============================================================
     public boolean isFemale() {
         return "female".equalsIgnoreCase(this.entityData.get(DATA_GENDER));
     }
@@ -75,9 +72,6 @@ public class HumanVindicatorEntity extends Vindicator {
         return SkinPathHelper.getSkinForType("human_vindicator", getGender(), getSkinIndex(), level());
     }
 
-    // ============================================================
-    // 🧬 Spawn inicial
-    // ============================================================
     @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty,
                                         MobSpawnType reason, SpawnGroupData spawnData) {
@@ -98,7 +92,6 @@ public class HumanVindicatorEntity extends Vindicator {
 
             SlimPatch.LOGGER.info("[SlimPatch] HumanVindicatorEntity spawn → gender={} skin={}", gender, skinIndex);
 
-            // 🔹 No establecemos CustomName para evitar hover tag
             this.setCustomName(null);
             this.setCustomNameVisible(false);
         } else {
@@ -109,9 +102,6 @@ public class HumanVindicatorEntity extends Vindicator {
         return groupData;
     }
 
-    // ============================================================
-    // 🔊 Sonidos personalizados
-    // ============================================================
     @Override
     protected SoundEvent getAmbientSound() {
         return this.isFemale() ? HumanIllagerSounds.femaleAmbient() : HumanIllagerSounds.maleAmbient();
@@ -127,9 +117,6 @@ public class HumanVindicatorEntity extends Vindicator {
         return this.isFemale() ? HumanIllagerSounds.femaleDeath() : HumanIllagerSounds.maleDeath();
     }
 
-    // ============================================================
-    // 🧍 Interacción
-    // ============================================================
     @Override
     public InteractionResult mobInteract(Player player, InteractionHand hand) {
         if (!this.level().isClientSide && hand == InteractionHand.MAIN_HAND) {
@@ -142,9 +129,6 @@ public class HumanVindicatorEntity extends Vindicator {
         return InteractionResult.SUCCESS;
     }
 
-    // ============================================================
-    // 💾 Persistencia
-    // ============================================================
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
@@ -159,9 +143,6 @@ public class HumanVindicatorEntity extends Vindicator {
         tag.putString("slimpatch_gender", this.getGender());
     }
 
-    // ============================================================
-    // 🏷️ Ocultar name tag permanentemente (compatible con Jade)
-    // ============================================================
     @Override
     public boolean shouldShowName() {
         return false;
@@ -174,7 +155,6 @@ public class HumanVindicatorEntity extends Vindicator {
 
     @Override
     public Component getName() {
-        // Devuelve siempre el nombre del tipo base (para mods tipo Jade)
         return this.getType().getDescription();
     }
 }

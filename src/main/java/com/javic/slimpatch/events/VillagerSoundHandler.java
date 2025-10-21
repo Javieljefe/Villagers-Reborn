@@ -27,18 +27,15 @@ public class VillagerSoundHandler {
 
         String name = event.getName();
 
-        // Detecta sonidos vanilla de aldeanos o wandering traders
         if (name.startsWith("entity.villager.") || name.startsWith("entity.wandering_trader.")) {
 
-            // 🎯 Si es sonido de spawn o ambiental
             if (name.equals("entity.villager.ambient") || name.equals("entity.villager.celebrate")
                     || name.equals("entity.wandering_trader.ambient") || name.equals("entity.wandering_trader.trade")) {
                 SlimPatch.LOGGER.debug("[SlimPatch] Reemplazando sonido vanilla por custom (villager/trader).");
-                event.setSound(null); // cancelamos el sonido vanilla
+                event.setSound(null);
                 return;
             }
 
-            // Bloquea sonidos redundantes de interacción (yes/no)
             if (name.equals(SoundEvents.VILLAGER_NO.getLocation().getPath())
                     || name.equals(SoundEvents.VILLAGER_YES.getLocation().getPath())) {
                 SlimPatch.LOGGER.debug("[SlimPatch] Bloqueado sonido vanilla duplicado: {}", name);
@@ -51,12 +48,8 @@ public class VillagerSoundHandler {
     public static void onEntitySpawn(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
 
-        // 🔹 Evita ejecutar en cliente (previene crash)
         if (event.getLevel().isClientSide()) return;
 
-        // ============================================================
-        // Caso 1: Aldeano vanilla (no reemplazado por humano)
-        // ============================================================
         if (entity instanceof Villager villager
                 && !(villager instanceof MaleVillagerEntity)
                 && !(villager instanceof FemaleVillagerEntity)) {
@@ -80,19 +73,14 @@ public class VillagerSoundHandler {
             });
         }
 
-        // ============================================================
-        // Caso 2: Wandering Trader (humano o vanilla)
-        // ============================================================
         if (entity instanceof WanderingTrader trader) {
             event.getLevel().getServer().execute(() -> {
                 boolean isFemale = false;
 
-                // Si es nuestra entidad personalizada
                 if (trader instanceof HumanWanderingTraderEntity humanTrader) {
                     isFemale = humanTrader.isFemale();
                     SlimPatch.LOGGER.debug("[SlimPatch] Detectado HumanWanderingTraderEntity (female={})", isFemale);
                 } else {
-                    // Trader vanilla (fallback)
                     CompoundTag data = trader.getPersistentData();
                     if (data.contains("hv_isFemale")) {
                         isFemale = data.getBoolean("hv_isFemale");
@@ -102,7 +90,6 @@ public class VillagerSoundHandler {
                     }
                 }
 
-                // 🔊 Reproduce el sonido correspondiente
                 if (isFemale) {
                     event.getLevel().playSound(null, trader.blockPosition(),
                             HumanVillagerSounds.femaleClick(), SoundSource.NEUTRAL, 1.0F, 1.0F);

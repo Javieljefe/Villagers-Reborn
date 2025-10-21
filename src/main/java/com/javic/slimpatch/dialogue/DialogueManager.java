@@ -13,15 +13,8 @@ import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
-/**
- * 🔹 Sistema de diálogos avanzado con éxito/fallo según personalidad.
- * Compatible con el JSON actual y soporta bloques "fail" opcionales.
- */
 public class DialogueManager {
 
-    // ============================================================
-    // 🔹 Diálogos activos (original)
-    // ============================================================
     private static final Map<UUID, UUID> ACTIVE_DIALOGUES = new HashMap<>();
 
     public static void startDialogue(Villager villager, net.minecraft.world.entity.player.Player player) {
@@ -44,9 +37,6 @@ public class DialogueManager {
         return villager != null ? ACTIVE_DIALOGUES.get(villager.getUUID()) : null;
     }
 
-    // ============================================================
-    // 🔹 Carga del JSON
-    // ============================================================
     private static final Map<String, Map<String, Object>> DIALOGUES = new HashMap<>();
 
     static {
@@ -79,9 +69,6 @@ public class DialogueManager {
         }
     }
 
-    // ============================================================
-    // 🔹 Cálculo de éxito/fallo
-    // ============================================================
     private static final Random RAND = new Random();
 
     private static final Map<VillagerPersonality, Map<String, Integer>> PERSONALITY_MODIFIERS = Map.ofEntries(
@@ -95,20 +82,16 @@ public class DialogueManager {
             Map.entry(VillagerPersonality.WISE, Map.of("Friendly", +10, "Mean", -10, "Joke", +10, "Flirt", -5))
     );
 
-    /**
-     * Determina si la interacción fue exitosa o no, y aplica reglas especiales.
-     */
     public static boolean calculateSuccess(VillagerPersonality personality, String option) {
         if (personality == null || option == null) return true;
 
-        // 🔸 Regla especial: "Mean" falla siempre salvo Grumpy/Mean
         if (option.equalsIgnoreCase("Mean") &&
                 personality != VillagerPersonality.GRUMPY &&
                 personality != VillagerPersonality.MEAN) {
             return false;
         }
 
-        int baseChance = 70; // base 70%
+        int baseChance = 70;
         int modifier = PERSONALITY_MODIFIERS
                 .getOrDefault(personality, Collections.emptyMap())
                 .getOrDefault(option, 0);
@@ -118,14 +101,10 @@ public class DialogueManager {
         return roll <= finalChance;
     }
 
-    // ============================================================
-    // 🔹 Obtener línea aleatoria (ahora con éxito/fallo real)
-    // ============================================================
     @SuppressWarnings("unchecked")
     public static String getRandomLine(String category, Villager villager, boolean success) {
         if (villager == null || category == null) return "...";
 
-        // Obtener personalidad
         VillagerPersonality personality = null;
         if (villager instanceof MaleVillagerEntity male) {
             personality = male.getPersonality();
@@ -138,7 +117,6 @@ public class DialogueManager {
             return "...";
         }
 
-        // Buscar categoría en el JSON
         Map<String, Object> byPersonality = DIALOGUES.get(category);
         if (byPersonality == null) {
             SlimPatch.LOGGER.warn("[SlimPatch] No dialogue category '{}'", category);
@@ -151,14 +129,12 @@ public class DialogueManager {
             return "...";
         }
 
-        // 🔸 Soporte para bloques simples o con "fail"
         if (block instanceof List<?>) {
             List<String> lines = (List<String>) block;
             return lines.isEmpty() ? "..." : lines.get(RAND.nextInt(lines.size()));
         } else if (block instanceof Map<?, ?> map) {
             List<String> chosen;
 
-            // 🔹 Si falló y hay "fail", se usa SIEMPRE "fail"
             if (!success && map.containsKey("fail")) {
                 Object failObj = map.get("fail");
                 if (failObj instanceof List<?>) {
@@ -169,7 +145,6 @@ public class DialogueManager {
                     chosen = new ArrayList<>();
                 }
             } else {
-                // 🔹 En caso contrario, usar "lines" o "default"
                 Object lineObj = map.get("lines");
                 if (lineObj instanceof List<?>) {
                     chosen = (List<String>) lineObj;
@@ -194,18 +169,13 @@ public class DialogueManager {
         return "...";
     }
 
-    // 🔹 Versión simplificada para compatibilidad (Intro y otros)
     public static String getRandomLine(String category, Villager villager) {
         return getRandomLine(category, villager, true);
     }
 
-    // ============================================================
-    // 🔹 Cálculo de cambio de relación
-    // ============================================================
     public static float getRelationshipChange(VillagerPersonality personality, String option, boolean success) {
         if (option == null) return 0.0f;
 
-        // "Mean" forzada a fallar salvo personalidades hostiles
         if (option.equalsIgnoreCase("Mean") &&
                 personality != VillagerPersonality.GRUMPY &&
                 personality != VillagerPersonality.MEAN) {

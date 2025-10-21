@@ -23,7 +23,6 @@ public class GenderedVillagerEggItem extends SpawnEggItem {
     public GenderedVillagerEggItem(EntityType<? extends Mob> type,
                                    boolean isMale,
                                    Item.Properties props) {
-        // Colores a 0 porque usas texturas PNG personalizadas
         super(type, 0, 0, props);
         this.isMale = isMale;
     }
@@ -48,7 +47,6 @@ public class GenderedVillagerEggItem extends SpawnEggItem {
         CompoundTag root = new CompoundTag();
         root.put("EntityTag", entityTag);
 
-        // 👇 En 1.21.1, usamos DataComponents.ENTITY_DATA
         stack.set(DataComponents.ENTITY_DATA, CustomData.of(root));
 
         return stack;

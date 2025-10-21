@@ -14,7 +14,7 @@ public class VillagerCooldownsStorage {
     public static void setCooldowns(UUID uuid, Map<String, Integer> cooldowns) {
         if (uuid == null) return;
         DATA.put(uuid, new HashMap<>(cooldowns));
-        SlimPatch.LOGGER.debug("[SlimPatch] ✅ Cooldowns actualizados para aldeano UUID {}", uuid);
+        SlimPatch.LOGGER.debug("[SlimPatch] Cooldowns actualizados para aldeano UUID {}", uuid);
     }
 
     public static Map<String, Integer> getCooldowns(UUID uuid) {
@@ -22,7 +22,7 @@ public class VillagerCooldownsStorage {
     }
 
     public static Map<UUID, Map<String, Integer>> getAll() {
-        SlimPatch.LOGGER.debug("[SlimPatch] 🕒 getAll() → {} aldeanos con cooldowns activos", DATA.size());
+        SlimPatch.LOGGER.debug("[SlimPatch] getAll() → {} aldeanos con cooldowns activos", DATA.size());
         return new HashMap<>(DATA);
     }
 

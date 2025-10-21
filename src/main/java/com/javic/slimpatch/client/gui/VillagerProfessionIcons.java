@@ -7,7 +7,6 @@ import java.util.Map;
 
 public class VillagerProfessionIcons {
 
-    // Nombres visibles de las profesiones vanilla
     public static final Map<VillagerProfession, String> NAMES = Map.ofEntries(
             Map.entry(VillagerProfession.ARMORER, "Armorer"),
             Map.entry(VillagerProfession.BUTCHER, "Butcher"),
@@ -26,7 +25,6 @@ public class VillagerProfessionIcons {
             Map.entry(VillagerProfession.NONE, "Unemployed")
     );
 
-    // Iconos de las profesiones vanilla
     public static final Map<VillagerProfession, ResourceLocation> ICONS = Map.ofEntries(
             Map.entry(VillagerProfession.ARMORER,       ResourceLocation.fromNamespaceAndPath("slimpatch", "textures/gui/professions/job_armorer.png")),
             Map.entry(VillagerProfession.BUTCHER,      ResourceLocation.fromNamespaceAndPath("slimpatch", "textures/gui/professions/job_butcher.png")),
@@ -49,21 +47,17 @@ public class VillagerProfessionIcons {
     private static final ResourceLocation MODDED_ICON =
             ResourceLocation.fromNamespaceAndPath("slimpatch", "textures/gui/professions/job_modded.png");
 
-    // Devuelve el nombre
     public static String getName(VillagerProfession profession) {
         if (NAMES.containsKey(profession)) {
             return NAMES.get(profession);
         }
-        // Profesión de otro mod
         return MODDED_NAME;
     }
 
-    // Devuelve el icono
     public static ResourceLocation getIcon(VillagerProfession profession) {
         if (ICONS.containsKey(profession)) {
             return ICONS.get(profession);
         }
-        // Profesión de otro mod
         return MODDED_ICON;
     }
 }

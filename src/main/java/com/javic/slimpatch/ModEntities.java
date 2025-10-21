@@ -12,18 +12,11 @@ import net.minecraft.world.entity.MobCategory;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
-/**
- * 📦 Registro de todas las entidades personalizadas del mod.
- * Incluye aldeanos humanos, comerciantes y variantes Illager humanas.
- */
 public class ModEntities {
 
     public static final DeferredRegister<EntityType<?>> ENTITIES =
             DeferredRegister.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, SlimPatch.MODID);
 
-    // ==============================================================
-    // 🧍 Aldeanos humanos
-    // ==============================================================
     public static final DeferredHolder<EntityType<?>, EntityType<MaleVillagerEntity>> MALE_VILLAGER =
             ENTITIES.register("male_villager", () -> {
                 SlimPatch.LOGGER.info("[SlimPatch] Registrando entidad slimpatch:male_villager");
@@ -40,9 +33,6 @@ public class ModEntities {
                         .build(ResourceLocation.fromNamespaceAndPath(SlimPatch.MODID, "female_villager").toString());
             });
 
-    // ==============================================================
-    // 🧳 Comerciante errante humano
-    // ==============================================================
     public static final DeferredHolder<EntityType<?>, EntityType<HumanWanderingTraderEntity>> HUMAN_WANDERING_TRADER =
             ENTITIES.register("wandering_trader", () -> {
                 SlimPatch.LOGGER.info("[SlimPatch] 🔄 Reemplazando entidad vanilla: minecraft:wandering_trader");
@@ -51,9 +41,6 @@ public class ModEntities {
                         .build("minecraft:wandering_trader");
             });
 
-    // ==============================================================
-    // 🌍 Comerciante errante humano (spawn natural, entidad separada)
-    // ==============================================================
     public static final DeferredHolder<EntityType<?>, EntityType<HumanWanderingTraderEntity>> HUMAN_TRADER_NATURAL =
             ENTITIES.register("human_trader", () -> {
                 SlimPatch.LOGGER.info("[SlimPatch] Registrando entidad natural: slimpatch:human_trader");
@@ -61,10 +48,6 @@ public class ModEntities {
                         .sized(0.6f, 1.95f)
                         .build(ResourceLocation.fromNamespaceAndPath(SlimPatch.MODID, "human_trader").toString());
             });
-
-    // ==============================================================
-    // ⚔️ Illagers humanos (hostiles)
-    // ==============================================================
 
     public static final DeferredHolder<EntityType<?>, EntityType<HumanPillagerEntity>> HUMAN_PILLAGER =
             ENTITIES.register("pillager", () -> {

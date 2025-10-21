@@ -24,7 +24,6 @@ public class FemaleVillagerModel<T extends LivingEntity> extends HumanoidModel<T
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition root = meshdefinition.getRoot();
 
-        // Cabeza
         root.addOrReplaceChild("head",
                 CubeListBuilder.create().texOffs(0, 0)
                         .addBox(-4.0F, -8.0F, -4.0F,
@@ -36,9 +35,6 @@ public class FemaleVillagerModel<T extends LivingEntity> extends HumanoidModel<T
 
         root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.ZERO);
 
-        // ============================================================
-        // 🔹 Cuerpo con cubos extra (pecho estilo Minecraft)
-        // ============================================================
         PartDefinition body = root.addOrReplaceChild("body",
                 CubeListBuilder.create().texOffs(16, 16)
                         .addBox(-4.0F, 0.0F, -2.0F,
@@ -48,7 +44,6 @@ public class FemaleVillagerModel<T extends LivingEntity> extends HumanoidModel<T
                                 8.0F, 12.0F, 4.0F, new CubeDeformation(0.25F)),
                 PartPose.ZERO);
 
-        // 🔸 Añadimos los cubos extra con nombres únicos para controlarlos luego
         body.addOrReplaceChild("cube", CubeListBuilder.create()
                         .texOffs(20, 21)
                         .addBox(-3.0F, 2.0F, -3.0F,
@@ -63,9 +58,6 @@ public class FemaleVillagerModel<T extends LivingEntity> extends HumanoidModel<T
 
         root.addOrReplaceChild("jacket", CubeListBuilder.create(), PartPose.ZERO);
 
-        // ============================================================
-        // 🔹 Brazos
-        // ============================================================
         root.addOrReplaceChild("right_arm",
                 CubeListBuilder.create().texOffs(40, 16)
                         .addBox(-2.0F, -2.0F, -2.0F,
@@ -88,9 +80,6 @@ public class FemaleVillagerModel<T extends LivingEntity> extends HumanoidModel<T
 
         root.addOrReplaceChild("left_sleeve", CubeListBuilder.create(), PartPose.ZERO);
 
-        // ============================================================
-        // 🔹 Piernas
-        // ============================================================
         root.addOrReplaceChild("right_leg",
                 CubeListBuilder.create().texOffs(0, 16)
                         .addBox(-2.0F, 0.0F, -2.0F,
@@ -110,9 +99,6 @@ public class FemaleVillagerModel<T extends LivingEntity> extends HumanoidModel<T
         return LayerDefinition.create(meshdefinition, 64, 64);
     }
 
-    // ============================================================
-    // 🔹 Ocultar cubos extra si la entidad es un bebé
-    // ============================================================
     @Override
     public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks,
                           float netHeadYaw, float headPitch) {
@@ -120,7 +106,6 @@ public class FemaleVillagerModel<T extends LivingEntity> extends HumanoidModel<T
 
         boolean isChild = entity.isBaby();
 
-        // Accedemos a los cubos "cube" y "cube2" definidos arriba
         ModelPart chestLeft = this.body.getChild("cube");
         ModelPart chestRight = this.body.getChild("cube2");
 

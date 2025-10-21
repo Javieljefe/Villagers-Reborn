@@ -7,21 +7,11 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-/**
- * 🎧 Sonidos personalizados para los Human Illagers (Pillagers humanos).
- * Basado en HumanVillagerSounds, adaptado a rutas male/female/illager.
- */
 public class HumanIllagerSounds {
 
-    // ========================================================
-    // 📦 Registro diferido
-    // ========================================================
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(Registries.SOUND_EVENT, "slimpatch");
 
-    // ========================================================
-    // 🔹 Sonidos masculinos
-    // ========================================================
     public static final DeferredHolder<SoundEvent, SoundEvent> MALE_AMBIENT =
             SOUND_EVENTS.register("illager.male.ambient",
                     () -> SoundEvent.createVariableRangeEvent(
@@ -37,9 +27,6 @@ public class HumanIllagerSounds {
                     () -> SoundEvent.createVariableRangeEvent(
                             ResourceLocation.fromNamespaceAndPath("slimpatch", "illager.male.death")));
 
-    // ========================================================
-    // 🔹 Sonidos femeninos
-    // ========================================================
     public static final DeferredHolder<SoundEvent, SoundEvent> FEMALE_AMBIENT =
             SOUND_EVENTS.register("illager.female.ambient",
                     () -> SoundEvent.createVariableRangeEvent(
@@ -55,9 +42,6 @@ public class HumanIllagerSounds {
                     () -> SoundEvent.createVariableRangeEvent(
                             ResourceLocation.fromNamespaceAndPath("slimpatch", "illager.female.death")));
 
-    // ========================================================
-    // 🔹 Helpers
-    // ========================================================
     public static SoundEvent maleAmbient() {
         return MALE_AMBIENT.get();
     }
@@ -82,9 +66,6 @@ public class HumanIllagerSounds {
         return FEMALE_DEATH.get();
     }
 
-    // ========================================================
-    // 🔹 Registro en SlimPatch
-    // ========================================================
     public static void register(IEventBus eventBus) {
         SOUND_EVENTS.register(eventBus);
     }

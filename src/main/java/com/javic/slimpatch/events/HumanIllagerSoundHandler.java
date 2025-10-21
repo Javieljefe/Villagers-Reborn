@@ -14,9 +14,6 @@ import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 @EventBusSubscriber(modid = "slimpatch")
 public class HumanIllagerSoundHandler {
 
-    // ============================================================
-    // 🎧 Bloquea sonidos vanilla de Illagers
-    // ============================================================
     @SubscribeEvent
     public static void onPlaySound(PlaySoundEvent event) {
         SoundInstance sound = event.getSound();
@@ -36,9 +33,6 @@ public class HumanIllagerSoundHandler {
         }
     }
 
-    // ============================================================
-    // 🧍 Sonido al spawnear (solo inicial)
-    // ============================================================
     @SubscribeEvent
     public static void onEntitySpawn(EntityJoinLevelEvent event) {
         if (event.getLevel().isClientSide()) return;

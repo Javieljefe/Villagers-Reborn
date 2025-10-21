@@ -10,17 +10,10 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 
-/**
- * Configuración del cliente: renderers, modelos y colores.
- * Solo se ejecuta en el lado CLIENTE.
- */
 public class ClientSetup {
 
     public static void init(IEventBus modEventBus) {
-        // Handler de selección de skin
         net.neoforged.neoforge.common.NeoForge.EVENT_BUS.register(SkinSelectionHandler.class);
-
-        // Eventos del cliente
         modEventBus.addListener(ClientSetup::onClientSetup);
         modEventBus.addListener(ClientSetup::registerRenderers);
         modEventBus.addListener(ClientSetup::registerLayerDefinitions);
@@ -28,7 +21,6 @@ public class ClientSetup {
     }
 
     private static void onClientSetup(final FMLClientSetupEvent event) {
-        // Inicialización del lado cliente (opcional por ahora)
     }
 
     private static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {

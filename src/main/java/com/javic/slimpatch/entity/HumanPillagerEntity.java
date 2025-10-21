@@ -22,14 +22,8 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 
-/**
- * 🧠 Entidad híbrida basada en Male/FemaleVillagerEntity,
- * adaptada para mobs hostiles (Pillager).
- * Mantiene género, skins y sonidos personalizados.
- */
 public class HumanPillagerEntity extends Pillager {
 
-    // 🔹 Solo 8 skins por género
     private static final int MALE_SKINS = 8;
     private static final int FEMALE_SKINS = 8;
 
@@ -44,9 +38,6 @@ public class HumanPillagerEntity extends Pillager {
         SlimPatch.LOGGER.debug("[SlimPatch] HumanPillagerEntity construido en nivel {}", level.dimension().location());
     }
 
-    // ============================================================
-    // 📦 Datos sincronizados
-    // ============================================================
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder) {
         super.defineSynchedData(builder);
@@ -54,9 +45,6 @@ public class HumanPillagerEntity extends Pillager {
         builder.define(DATA_GENDER, "male");
     }
 
-    // ============================================================
-    // 🎨 Skins y género
-    // ============================================================
     public boolean isFemale() {
         return "female".equalsIgnoreCase(this.entityData.get(DATA_GENDER));
     }
@@ -80,13 +68,9 @@ public class HumanPillagerEntity extends Pillager {
     }
 
     public ResourceLocation getSkinTexture() {
-        // 🔹 Llama al helper con tipo explícito "human_pillager"
         return SkinPathHelper.getSkinForType("human_pillager", getGender(), getSkinIndex(), level());
     }
 
-    // ============================================================
-    // 🧬 Spawn inicial
-    // ============================================================
     @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty,
                                         MobSpawnType reason, SpawnGroupData spawnData) {
@@ -98,7 +82,6 @@ public class HumanPillagerEntity extends Pillager {
             String gender = female ? "female" : "male";
             this.setGender(gender);
 
-            // 🔹 Solo 8 skins por género
             int skinIndex = this.getRandom().nextInt(female ? FEMALE_SKINS : MALE_SKINS) + 1;
             this.setSkinIndex(skinIndex);
 
@@ -108,11 +91,9 @@ public class HumanPillagerEntity extends Pillager {
 
             SlimPatch.LOGGER.info("[SlimPatch] HumanPillagerEntity spawn → gender={} skin={}", gender, skinIndex);
 
-            // 🔹 No establecemos CustomName para evitar hover tag
             this.setCustomName(null);
             this.setCustomNameVisible(false);
         } else {
-            // Restaurar datos persistidos si el mob se recarga desde NBT
             if (data.contains("slimpatch_gender")) {
                 this.setGender(data.getString("slimpatch_gender"));
             }
@@ -124,9 +105,6 @@ public class HumanPillagerEntity extends Pillager {
         return groupData;
     }
 
-    // ============================================================
-    // 🔊 Sonidos personalizados
-    // ============================================================
     @Override
     protected SoundEvent getAmbientSound() {
         return this.isFemale() ? HumanIllagerSounds.femaleAmbient() : HumanIllagerSounds.maleAmbient();
@@ -142,9 +120,6 @@ public class HumanPillagerEntity extends Pillager {
         return this.isFemale() ? HumanIllagerSounds.femaleDeath() : HumanIllagerSounds.maleDeath();
     }
 
-    // ============================================================
-    // 🧍 Interacción
-    // ============================================================
     @Override
     public InteractionResult mobInteract(Player player, InteractionHand hand) {
         if (!this.level().isClientSide && hand == InteractionHand.MAIN_HAND) {
@@ -160,9 +135,6 @@ public class HumanPillagerEntity extends Pillager {
         return InteractionResult.SUCCESS;
     }
 
-    // ============================================================
-    // 💾 Persistencia
-    // ============================================================
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
@@ -181,17 +153,11 @@ public class HumanPillagerEntity extends Pillager {
         tag.putString("slimpatch_gender", this.getGender());
     }
 
-    // ============================================================
-    // ⚙️ IA básica
-    // ============================================================
     @Override
     protected void registerGoals() {
-        super.registerGoals(); // mantiene comportamiento hostil original
+        super.registerGoals();
     }
 
-    // ============================================================
-    // 🏷️ Ocultar name tag permanentemente (compatible con Jade)
-    // ============================================================
     @Override
     public boolean shouldShowName() {
         return false;
@@ -204,7 +170,6 @@ public class HumanPillagerEntity extends Pillager {
 
     @Override
     public Component getName() {
-        // Devuelve siempre el nombre del tipo base (para mods tipo Jade)
         return this.getType().getDescription();
     }
 }

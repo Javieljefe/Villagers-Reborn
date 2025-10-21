@@ -49,13 +49,13 @@ public class TestIllagerSoundCommand {
 
             if (sound == null) {
                 ctx.getSource().sendFailure(
-                        Component.literal("⚠️ Error: tipo desconocido o SoundEvent no registrado."));
+                        Component.literal("Error: tipo desconocido o SoundEvent no registrado."));
                 return 0;
             }
 
             player.playNotifySound(sound, SoundSource.HOSTILE, 1.0F, 1.0F);
             ctx.getSource().sendSuccess(
-                    () -> Component.literal("✅ Reproduciendo sonido: " + type), false);
+                    () -> Component.literal("Reproduciendo sonido: " + type), false);
 
         } catch (CommandSyntaxException e) {
             ctx.getSource().sendFailure(Component.literal("No se pudo obtener el jugador."));

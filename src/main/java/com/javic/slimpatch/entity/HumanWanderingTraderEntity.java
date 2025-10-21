@@ -45,10 +45,6 @@ public class HumanWanderingTraderEntity extends WanderingTrader {
         builder.define(DATA_IS_FEMALE, false);
     }
 
-    // ========================================================
-    // 🎨 Skins
-    // ========================================================
-
     public void setSkinIndex(int index) {
         this.entityData.set(DATA_SKIN, index);
         this.getPersistentData().putInt("hv_skin", index);
@@ -72,10 +68,6 @@ public class HumanWanderingTraderEntity extends WanderingTrader {
         return ResourceLocation.fromNamespaceAndPath("slimpatch",
                 "textures/entity/human_trader/" + gender + "/skin_" + String.format("%02d", getSkinIndex()) + ".png");
     }
-
-    // ========================================================
-    // 🧬 Spawn & setup
-    // ========================================================
 
     @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty,
@@ -103,10 +95,6 @@ public class HumanWanderingTraderEntity extends WanderingTrader {
 
         return groupData;
     }
-
-    // ========================================================
-    // 🔊 Sonidos e interacción
-    // ========================================================
 
     @Override
     public InteractionResult mobInteract(Player player, InteractionHand hand) {
@@ -142,10 +130,6 @@ public class HumanWanderingTraderEntity extends WanderingTrader {
     protected SoundEvent getDeathSound() {
         return isFemale() ? HumanVillagerSounds.femaleDeath() : HumanVillagerSounds.maleDeath();
     }
-
-    // ========================================================
-    // 💾 Persistencia
-    // ========================================================
 
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {

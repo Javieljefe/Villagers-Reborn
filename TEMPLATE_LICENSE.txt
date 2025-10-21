@@ -1,9 +1,25 @@
-MIT License
+Villagers Reborn License
+Copyright (c) 2025 Javieljefe
 
-Copyright (c) 2023 NeoForged project
+This mod is based on the NeoForged MDK template, which is distributed under the MIT License.
+The following additional terms apply to all original content of Villagers Reborn:
 
-This license applies to the template files as supplied by github.com/NeoForged/MDK
+You are free to:
+- Use this mod in modpacks.
+- Create ports or compatibility patches (for example, to Fabric or other loaders).
+- Make addons, resource packs/data packs, or small mods that work alongside Villagers Reborn.
 
+You may not:
+- Reupload this mod or modified versions of it to other sites without permission.
+- Publish new versions, updates, or derivative projects that include new features without explicit permission from the author.
+
+If you want to collaborate, extend, or reuse part of the code for another project, please contact me first.
+
+The original MIT License of the NeoForged MDK applies to the template files only.
+
+----------------------------------------
+MIT License (for NeoForged MDK template)
+----------------------------------------
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

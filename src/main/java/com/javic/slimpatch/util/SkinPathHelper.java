@@ -54,7 +54,6 @@ public class SkinPathHelper {
             loc = ResourceLocation.tryParse("slimpatch:textures/entity/" + type + "/" + gender + "/skin_1.png");
         }
 
-        // 🔸 Verificar existencia del recurso; si no existe, usar una skin de respaldo
         try {
             if (net.minecraft.client.Minecraft.getInstance().getResourceManager().getResource(loc).isEmpty()) {
                 int fallback = (int) (Math.random() * 70) + 1;

@@ -7,10 +7,6 @@ import net.minecraft.world.entity.player.Player;
 import java.util.EnumSet;
 import java.util.UUID;
 
-/**
- * Goal que bloquea movimiento y hace que el aldeano mire al jugador
- * mientras está en un diálogo (replica la lógica del trading vanilla).
- */
 public class DialogueGoal extends Goal {
 
     private final Villager villager;
@@ -46,7 +42,6 @@ public class DialogueGoal extends Goal {
 
     @Override
     public void stop() {
-        // Cuando termina el diálogo, se libera en DialogueManager.onClose()
         this.villager.getNavigation().stop();
     }
 }
