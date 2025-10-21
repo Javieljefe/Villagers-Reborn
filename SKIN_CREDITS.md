@@ -14,6 +14,7 @@ Thanks to all the amazing creators whose work made this mod possible.
 
 ### Linked profiles  
 
+<br>
 
 **[PigtailTHUNDER](https://www.minecraftskins.com/profile/4785822/pigtailthunder)**  
 
