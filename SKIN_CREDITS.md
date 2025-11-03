@@ -40,6 +40,8 @@ Thanks to all the amazing creators whose work made this mod possible.
 
 **[SorryFromAoi](https://www.minecraftskins.com/profile/4605643/sorryfromaoi)** 
 
+**[xLoveCutiex](https://www.minecraftskins.com/profile/5901090/xlovecutiex/2)** 
+
 ---
 
 Levirosepettals  
