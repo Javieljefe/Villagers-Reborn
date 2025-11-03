@@ -36,7 +36,9 @@ Thanks to all the amazing creators whose work made this mod possible.
 
 **[Dant0ny](https://www.minecraftskins.com/profile/8629618/Dant0ny)**  
 
-**[ImNixu](https://www.minecraftskins.com/profile/8351238/ImNixu)**  
+**[ImNixu](https://www.minecraftskins.com/profile/8351238/ImNixu)** 
+
+**[SorryFromAoi](https://www.minecraftskins.com/profile/4605643/sorryfromaoi)** 
 
 ---
 
@@ -91,8 +93,6 @@ wallflxwer
 Jxydxns  
 
 SunnyShift  
-
-SorryFromAoi  
 
 moonyyyyy  
 
