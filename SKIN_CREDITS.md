@@ -42,6 +42,8 @@ Thanks to all the amazing creators whose work made this mod possible.
 
 **[xLoveCutiex](https://www.minecraftskins.com/profile/5901090/xlovecutiex/2)** 
 
+**[Gsantos7](https://www.minecraftskins.com/profile/8669768/Gsantos7)** 
+
 ---
 
 Levirosepettals  
