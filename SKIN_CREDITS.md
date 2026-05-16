@@ -26,6 +26,8 @@ Thanks to all the amazing creators whose work made this mod possible.
 
 **[Cleora](https://www.minecraftskins.com/profile/3625549/Cleora)**  
 
+**[WoodenSoupLadle](https://www.minecraftskins.com/profile/3096575/WoodenSoupLadle)** 
+
 **[gloomberry](https://www.minecraftskins.com/profile/8684453/gloomberry)**  
 
 **[Xersycore](https://www.minecraftskins.com/profile/8617355/xersycore)**  
