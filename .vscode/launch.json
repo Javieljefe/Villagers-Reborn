@@ -12,11 +12,11 @@
       "projectName": "slimpatch-template-1.21.1",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Users\\javic\\Documents\\1. Minecraft NECESARIO 2\\slimpatch-template-1.21.1\\build\\moddev\\clientRunProgramArgs.txt"
+        "@C:\\Users\\javic\\Desktop\\Mods\\Minecraft\\slimpatch-template-1.21.1\\build\\moddev\\clientRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Users\\javic\\Documents\\1. Minecraft NECESARIO 2\\slimpatch-template-1.21.1\\build\\moddev\\clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003dslimpatch%%C:\\Users\\javic\\Documents\\1. Minecraft NECESARIO 2\\slimpatch-template-1.21.1\\bin\\main"
+        "@C:\\Users\\javic\\Desktop\\Mods\\Minecraft\\slimpatch-template-1.21.1\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dslimpatch%%C:\\Users\\javic\\Desktop\\Mods\\Minecraft\\slimpatch-template-1.21.1\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {},
@@ -34,11 +34,11 @@
       "projectName": "slimpatch-template-1.21.1",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Users\\javic\\Documents\\1. Minecraft NECESARIO 2\\slimpatch-template-1.21.1\\build\\moddev\\dataRunProgramArgs.txt"
+        "@C:\\Users\\javic\\Desktop\\Mods\\Minecraft\\slimpatch-template-1.21.1\\build\\moddev\\dataRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Users\\javic\\Documents\\1. Minecraft NECESARIO 2\\slimpatch-template-1.21.1\\build\\moddev\\dataRunVmArgs.txt",
-        "-Dfml.modFolders\u003dslimpatch%%C:\\Users\\javic\\Documents\\1. Minecraft NECESARIO 2\\slimpatch-template-1.21.1\\bin\\main"
+        "@C:\\Users\\javic\\Desktop\\Mods\\Minecraft\\slimpatch-template-1.21.1\\build\\moddev\\dataRunVmArgs.txt",
+        "-Dfml.modFolders\u003dslimpatch%%C:\\Users\\javic\\Desktop\\Mods\\Minecraft\\slimpatch-template-1.21.1\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {},
@@ -56,11 +56,11 @@
       "projectName": "slimpatch-template-1.21.1",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Users\\javic\\Documents\\1. Minecraft NECESARIO 2\\slimpatch-template-1.21.1\\build\\moddev\\gameTestServerRunProgramArgs.txt"
+        "@C:\\Users\\javic\\Desktop\\Mods\\Minecraft\\slimpatch-template-1.21.1\\build\\moddev\\gameTestServerRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Users\\javic\\Documents\\1. Minecraft NECESARIO 2\\slimpatch-template-1.21.1\\build\\moddev\\gameTestServerRunVmArgs.txt",
-        "-Dfml.modFolders\u003dslimpatch%%C:\\Users\\javic\\Documents\\1. Minecraft NECESARIO 2\\slimpatch-template-1.21.1\\bin\\main"
+        "@C:\\Users\\javic\\Desktop\\Mods\\Minecraft\\slimpatch-template-1.21.1\\build\\moddev\\gameTestServerRunVmArgs.txt",
+        "-Dfml.modFolders\u003dslimpatch%%C:\\Users\\javic\\Desktop\\Mods\\Minecraft\\slimpatch-template-1.21.1\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {},
@@ -78,11 +78,11 @@
       "projectName": "slimpatch-template-1.21.1",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Users\\javic\\Documents\\1. Minecraft NECESARIO 2\\slimpatch-template-1.21.1\\build\\moddev\\serverRunProgramArgs.txt"
+        "@C:\\Users\\javic\\Desktop\\Mods\\Minecraft\\slimpatch-template-1.21.1\\build\\moddev\\serverRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Users\\javic\\Documents\\1. Minecraft NECESARIO 2\\slimpatch-template-1.21.1\\build\\moddev\\serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003dslimpatch%%C:\\Users\\javic\\Documents\\1. Minecraft NECESARIO 2\\slimpatch-template-1.21.1\\bin\\main"
+        "@C:\\Users\\javic\\Desktop\\Mods\\Minecraft\\slimpatch-template-1.21.1\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dslimpatch%%C:\\Users\\javic\\Desktop\\Mods\\Minecraft\\slimpatch-template-1.21.1\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {},

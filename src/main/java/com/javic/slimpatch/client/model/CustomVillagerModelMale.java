@@ -1,14 +1,23 @@
 package com.javic.slimpatch.client.model;
 
+import com.javic.slimpatch.entity.FamilyVillager;
+import com.javic.slimpatch.entity.VillagerAgeStage;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.CrossbowItem;
 
 public class CustomVillagerModelMale<T extends LivingEntity> extends HumanoidModel<T> {
+
+    private VillagerAgeStage ageStage = VillagerAgeStage.ADULT;
 
     public static final ModelLayerLocation LAYER_LOCATION =
             new ModelLayerLocation(
@@ -92,5 +101,53 @@ public class CustomVillagerModelMale<T extends LivingEntity> extends HumanoidMod
         root.addOrReplaceChild("left_pants", CubeListBuilder.create(), PartPose.ZERO);
 
         return LayerDefinition.create(meshdefinition, 64, 64);
+    }
+
+    @Override
+    public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks,
+                          float netHeadYaw, float headPitch) {
+        super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+        this.ageStage = entity instanceof FamilyVillager familyVillager ? familyVillager.getAgeStage() : VillagerAgeStage.ADULT;
+
+        if (entity.isUsingItem() && entity.getUseItem().getItem() instanceof CrossbowItem && entity.getUsedItemHand() == InteractionHand.MAIN_HAND) {
+            this.rightArm.xRot = (float) Math.toRadians(-65);
+            this.rightArm.yRot = 0.0F;
+            this.rightArm.zRot = 0.0F;
+            this.leftArm.xRot = (float) Math.toRadians(-35);
+            this.leftArm.yRot = (float) Math.toRadians(-15);
+            this.leftArm.zRot = (float) Math.toRadians(10);
+        } else if (entity.getMainHandItem().getItem() instanceof CrossbowItem && entity instanceof net.minecraft.world.entity.Mob mob && mob.getTarget() != null) {
+            this.rightArm.xRot = (float) Math.toRadians(-90);
+            this.rightArm.yRot = 0.0F;
+            this.rightArm.zRot = 0.0F;
+            this.leftArm.xRot = (float) Math.toRadians(-30);
+            this.leftArm.yRot = (float) Math.toRadians(15);
+            this.leftArm.zRot = 0.0F;
+        } else if (entity.isUsingItem() && entity.getUseItem().getItem() instanceof BowItem && entity.getUsedItemHand() == InteractionHand.MAIN_HAND) {
+            this.rightArm.xRot = (float) Math.toRadians(-90) + this.head.xRot;
+            this.rightArm.yRot = this.head.yRot - 0.1F;
+            this.rightArm.zRot = 0.0F;
+            this.leftArm.xRot = (float) Math.toRadians(-70) + this.head.xRot;
+            this.leftArm.yRot = this.head.yRot + 0.45F;
+            this.leftArm.zRot = 0.0F;
+        }
+    }
+
+    @Override
+    public void renderToBuffer(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, int color) {
+        if (this.ageStage == VillagerAgeStage.TODDLER) {
+            poseStack.pushPose();
+            poseStack.scale(1.2F, 1.2F, 1.2F);
+            poseStack.translate(0.0F, 0.12F, 0.0F);
+            this.headParts().forEach(part -> part.render(poseStack, buffer, packedLight, packedOverlay, color));
+            poseStack.popPose();
+            poseStack.pushPose();
+            poseStack.scale(0.85F, 0.85F, 0.85F);
+            poseStack.translate(0.0F, 0.16F, 0.0F);
+            this.bodyParts().forEach(part -> part.render(poseStack, buffer, packedLight, packedOverlay, color));
+            poseStack.popPose();
+            return;
+        }
+        super.renderToBuffer(poseStack, buffer, packedLight, packedOverlay, color);
     }
 }

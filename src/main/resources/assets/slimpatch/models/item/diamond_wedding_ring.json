@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "slimpatch:item/diamond_wedding_ring"
+  }
+}

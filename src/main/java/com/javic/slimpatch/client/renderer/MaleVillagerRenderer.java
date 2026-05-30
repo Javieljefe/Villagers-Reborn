@@ -4,30 +4,42 @@ import com.javic.slimpatch.client.model.CustomVillagerModelMale;
 import com.javic.slimpatch.entity.MaleVillagerEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
-public class MaleVillagerRenderer extends MobRenderer<MaleVillagerEntity, HumanoidModel<MaleVillagerEntity>> {
+public class MaleVillagerRenderer extends AbstractVillagerHumanoidRenderer<MaleVillagerEntity> {
 
     public MaleVillagerRenderer(EntityRendererProvider.Context context) {
-        super(context, new CustomVillagerModelMale<>(context.bakeLayer(CustomVillagerModelMale.LAYER_LOCATION)), 0.5f);
+        super(context, new CustomVillagerModelMale<>(context.bakeLayer(CustomVillagerModelMale.LAYER_LOCATION)));
     }
 
     @Override
-    public ResourceLocation getTextureLocation(MaleVillagerEntity entity) {
+    protected String getCustomSkinPath(MaleVillagerEntity entity) {
+        return entity.getCustomSkinPath();
+    }
+
+    @Override
+    protected ResourceLocation getFallbackTextureLocation(MaleVillagerEntity entity) {
         return entity.getSkinTexture();
     }
 
     @Override
-    public void render(MaleVillagerEntity entity, float entityYaw, float partialTicks,
-                       PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-        poseStack.pushPose();
+    protected float getHorseMountedOffset(MaleVillagerEntity entity) {
+        return -0.42F;
+    }
 
+    @Override
+    protected float getCamelMountedOffset(MaleVillagerEntity entity) {
+        return -0.32F;
+    }
+
+    @Override
+    protected void applyModelScale(MaleVillagerEntity entity, PoseStack poseStack) {
+        float widthScale = entity.getVisualWidth() / 100.0F;
+        float heightScale = entity.getVisualHeight() / 100.0F;
+        float ageStageScale = this.getAgeStageScale(entity);
         poseStack.scale(1.0F, 1.0F, 0.995F);
-
-        super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
-        poseStack.popPose();
+        poseStack.scale(widthScale, heightScale, widthScale);
+        poseStack.scale(ageStageScale, ageStageScale, ageStageScale);
     }
 }

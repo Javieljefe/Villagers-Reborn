@@ -27,4 +27,31 @@ public class ModItems {
                             false,
                             new Item.Properties()
                     ));
+
+    public static final DeferredHolder<Item, Item> ROMANTIC_BOUQUET =
+            ITEMS.register("romantic_bouquet", () -> new Item(new Item.Properties()));
+
+    public static final DeferredHolder<Item, Item> IRON_WEDDING_RING =
+            ITEMS.register("iron_wedding_ring", () -> new Item(new Item.Properties()));
+
+    public static final DeferredHolder<Item, Item> GOLD_WEDDING_RING =
+            ITEMS.register("gold_wedding_ring", () -> new Item(new Item.Properties()));
+
+    public static final DeferredHolder<Item, Item> EMERALD_WEDDING_RING =
+            ITEMS.register("emerald_wedding_ring", () -> new Item(new Item.Properties()));
+
+    public static final DeferredHolder<Item, Item> DIAMOND_WEDDING_RING =
+            ITEMS.register("diamond_wedding_ring", () -> new Item(new Item.Properties()));
+
+    public static final DeferredHolder<Item, Item> DIVORCE_PAPERS =
+            ITEMS.register("divorce_papers", () -> new Item(new Item.Properties()));
+
+    public static final DeferredHolder<Item, FamilyCharmItem> FAMILY_CHARM =
+            ITEMS.register("family_charm", () -> new FamilyCharmItem(new Item.Properties()));
+
+    public static final DeferredHolder<Item, BabyGenderCharmItem> SUN_CHARM =
+            ITEMS.register("sun_charm", () -> new BabyGenderCharmItem(new Item.Properties()));
+
+    public static final DeferredHolder<Item, BabyGenderCharmItem> MOON_CHARM =
+            ITEMS.register("moon_charm", () -> new BabyGenderCharmItem(new Item.Properties()));
 }

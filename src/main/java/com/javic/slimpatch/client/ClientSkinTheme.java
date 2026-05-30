@@ -8,11 +8,9 @@ public class ClientSkinTheme {
     private static boolean hasSentToServer = false;
 
     public static void setTheme(String newTheme) {
-        if (newTheme == null || newTheme.isEmpty()) return;
-        theme = newTheme;
-        hasSentToServer = false;
-        Minecraft mc = Minecraft.getInstance();
-        if (mc.player != null) {}
+        String normalized = normalizeTheme(newTheme);
+        if (normalized == null) return;
+        applyTheme(normalized);
     }
 
     public static void sendThemeToServerIfNeeded() {}
@@ -29,5 +27,24 @@ public class ClientSkinTheme {
 
     public static void markGuiShownOnce() {
         guiShownOnce = true;
+    }
+
+    public static void clear() {
+        applyTheme("");
+    }
+
+    private static void applyTheme(String newTheme) {
+        if (theme.equals(newTheme)) return;
+        theme = newTheme;
+        hasSentToServer = false;
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.level != null) {
+            mc.levelRenderer.allChanged();
+        }
+    }
+
+    private static String normalizeTheme(String newTheme) {
+        if (newTheme == null || newTheme.isEmpty()) return null;
+        return "fantasy".equalsIgnoreCase(newTheme) ? "fantasy" : "modern";
     }
 }

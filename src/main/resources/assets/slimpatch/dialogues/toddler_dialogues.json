@@ -1,0 +1,532 @@
+{
+  "Intro": {
+    "friendly": {
+      "lines": [
+        "Hi hi!",
+        "Hello!",
+        "I saw a bug!",
+        "Do you like frogs?",
+        "I found a flower!"
+      ]
+    },
+    "friendly_player_child": {
+      "lines": [
+        "Hi hi!",
+        "Watch this!",
+        "Look at me!",
+        "I found a flower!",
+        "I made a funny face!"
+      ]
+    }
+  },
+  "Friendly": {
+    "friendly": {
+      "lines": [
+        "You’re nice.",
+        "That was nice!",
+        "Nice!.",
+        "You’re fun.",
+        "Good words!"
+      ],
+      "fail": [
+        "I don’t know.",
+        "Not now.",
+        "Maybe later.",
+        "I’m looking at bugs.",
+        "I forgot what to say."
+      ]
+    }
+  },
+  "Joke": {
+    "friendly": {
+      "lines": [
+        "Hehe!",
+        "That was funny!",
+        "Again!",
+        "You’re silly.",
+        "My face laughed!"
+      ],
+      "fail": [
+        "I don’t get it.",
+        "Was that a joke?",
+        "My laugh got lost.",
+        "That was not funny.",
+        "Maybe try again?"
+      ]
+    }
+  },
+  "Mean": {
+    "friendly": {
+      "lines": [
+        "You’re pretending to be grumpy!",
+        "That was a funny mean face.",
+        "You sound like a tiny zombie.",
+        "You’re not very scary.",
+        "I know you’re joking."
+      ],
+      "fail": [
+        "That was not nice.",
+        "Why did you say that?",
+        "I don’t like that.",
+        "That made me sad.",
+        "Can you be nice?"
+      ]
+    }
+  }
+}
+{
+  "Intro": {
+    "shy": {
+      "lines": [
+        "Oh... hi.",
+        "Hi.",
+        "I was hiding.",
+        "You saw me!",
+        "I’m just standing here."
+      ]
+    },
+    "shy_player_child": {
+      "lines": [
+        "Hi.",
+        "I was waiting here.",
+        "I didn’t drop it this time...",
+        "I remembered what you said.",
+        "I’m doing tiny steps."
+      ]
+    }
+  },
+  "Friendly": {
+    "shy": {
+      "lines": [
+        "Oh... thanks.",
+        "That was nice.",
+        "I liked that.",
+        "You’re kind.",
+        "That made me feel better."
+      ],
+      "fail": [
+        "I don’t know.",
+        "I’m too quiet now.",
+        "Maybe later.",
+        "I forgot my words.",
+        "My face is hiding."
+      ]
+    }
+  },
+  "Joke": {
+    "shy": {
+      "lines": [
+        "Hehe...",
+        "That was funny.",
+        "I laughed a little.",
+        "That was silly.",
+        "I almost giggled."
+      ],
+      "fail": [
+        "I don’t get it.",
+        "Was that funny?",
+        "I missed it.",
+        "My shy came back.",
+        "Maybe tell it slower?"
+      ]
+    }
+  },
+  "Mean": {
+    "shy": {
+      "lines": [
+        "You’re doing a scary voice.",
+        "I know you’re joking... I think.",
+        "That was a fake grumpy face.",
+        "You’re not too scary.",
+        "I can be scary too... boo."
+      ],
+      "fail": [
+        "That was mean.",
+        "Please don’t.",
+        "I don’t like that.",
+        "That made me nervous.",
+        "Can we stop?"
+      ]
+    }
+  }
+}
+{
+  "Intro": {
+    "grumpy": {
+      "lines": [
+        "Hi.",
+        "What?",
+        "I was busy.",
+        "My feet are tired.",
+        "The sun is too bright."
+      ]
+    },
+    "grumpy_player_child": {
+      "lines": [
+        "Hi.",
+        "I didn’t do it.",
+        "It was already like that.",
+        "I’m not tired.",
+        "I don’t need help."
+      ]
+    }
+  },
+  "Friendly": {
+    "grumpy": {
+      "lines": [
+        "That was okay.",
+        "Fine, that was nice.",
+        "I guess I liked that.",
+        "You’re not annoying.",
+        "That was better than expected."
+      ],
+      "fail": [
+        "No thanks.",
+        "Not now.",
+        "I’m busy being grumpy.",
+        "I don’t want nice words.",
+        "That didn’t work."
+      ]
+    }
+  },
+  "Joke": {
+    "grumpy": {
+      "lines": [
+        "Hmph.",
+        "That was funny. A little.",
+        "I didn’t laugh.",
+        "Okay, maybe I laughed.",
+        "Don’t tell anyone I liked that."
+      ],
+      "fail": [
+        "No.",
+        "Not funny.",
+        "That was weird.",
+        "My face didn’t laugh.",
+        "Try a better joke."
+      ]
+    }
+  },
+  "Mean": {
+    "grumpy": {
+      "lines": [
+        "Finally, grumpy words.",
+        "That sounded right.",
+        "You get it.",
+        "Being grumpy is easy.",
+        "That was a good grumble."
+      ],
+      "fail": [
+        "That was just mean.",
+        "You’re doing it wrong.",
+        "Too mean.",
+        "I don’t like that kind.",
+        "That wasn’t grumpy. That was bad."
+      ]
+    }
+  }
+}
+{
+  "Intro": {
+    "mean": {
+      "lines": [
+        "What?",
+        "Hi. I guess.",
+        "Move, I’m walking.",
+        "I’m busy being important.",
+        "Don’t step on my spot."
+      ]
+    },
+    "mean_player_child": {
+      "lines": [
+        "Hi.",
+        "I didn’t do it.",
+        "They started it.",
+        "I was being careful.",
+        "Nobody saw anything."
+      ]
+    }
+  },
+  "Friendly": {
+    "mean": {
+      "lines": [
+        "Fine, that was nice.",
+        "You’re not terrible.",
+        "That was okay, I guess.",
+        "I might allow that.",
+        "Don’t get too proud."
+      ],
+      "fail": [
+        "No.",
+        "Too nice.",
+        "That was boring.",
+        "Try harder.",
+        "I don’t want sweet talk."
+      ]
+    }
+  },
+  "Joke": {
+    "mean": {
+      "lines": [
+        "Heh.",
+        "That was funny.",
+        "You looked silly saying that.",
+        "Okay, that one was good.",
+        "I’m laughing at the joke. Mostly."
+      ],
+      "fail": [
+        "No.",
+        "Bad joke.",
+        "That was not funny.",
+        "My face said no.",
+        "Even a slime could do better."
+      ]
+    }
+  },
+  "Mean": {
+    "mean": {
+      "lines": [
+        "Ha! Good one.",
+        "That sounded mean.",
+        "I like that one.",
+        "You’re learning.",
+        "Say it with more face."
+      ],
+      "fail": [
+        "That was weak.",
+        "Not mean enough.",
+        "That was just rude.",
+        "Wrong kind of mean.",
+        "I can do better."
+      ]
+    }
+  }
+}
+{
+  "Intro": {
+    "brave": {
+      "lines": [
+        "Hi!",
+        "I’m not scared.",
+        "I can jump really far.",
+        "I saw a shadow and didn’t run.",
+        "I’m practicing being brave."
+      ]
+    },
+    "brave_player_child": {
+      "lines": [
+        "Hi!",
+        "Watch me!",
+        "I didn’t get scared.",
+        "I almost fought a leaf.",
+        "I’m being very brave today."
+      ]
+    }
+  },
+  "Friendly": {
+    "brave": {
+      "lines": [
+        "Thanks!",
+        "That helps!",
+        "Brave people like nice words.",
+        "I feel stronger now.",
+        "That was good to hear!"
+      ],
+      "fail": [
+        "Not now.",
+        "I’m training.",
+        "I didn’t hear it.",
+        "Say it louder!",
+        "I’m too brave to listen."
+      ]
+    }
+  },
+  "Joke": {
+    "brave": {
+      "lines": [
+        "Haha!",
+        "That was funny!",
+        "A brave joke!",
+        "I laughed and didn’t fall.",
+        "Tell another one!"
+      ],
+      "fail": [
+        "I don’t get it.",
+        "Was that the joke?",
+        "That joke was tiny.",
+        "It didn’t scare a laugh out.",
+        "Try a stronger joke."
+      ]
+    }
+  },
+  "Mean": {
+    "brave": {
+      "lines": [
+        "I can take it!",
+        "That didn’t scare me.",
+        "Nice try!",
+        "I’m still standing.",
+        "You sound like a tiny pillager."
+      ],
+      "fail": [
+        "That was too mean.",
+        "Don’t say that.",
+        "That wasn’t brave.",
+        "I don’t like that kind.",
+        "Mean words aren’t strong."
+      ]
+    }
+  }
+}
+{
+  "Intro": {
+    "greedy": {
+      "lines": [
+        "Hi!",
+        "Got snacks?",
+        "I found treasure.",
+        "It was shiny.",
+        "I’m counting my stuff."
+      ]
+    },
+    "greedy_player_child": {
+      "lines": [
+        "Hi!",
+        "Look, shiny!",
+        "I saved this one.",
+        "I didn’t lose it!",
+        "This is mine, okay?"
+      ]
+    }
+  },
+  "Friendly": {
+    "greedy": {
+      "lines": [
+        "That was nice.",
+        "I’ll keep that.",
+        "Good words are shiny.",
+        "That felt valuable.",
+        "You can say more."
+      ],
+      "fail": [
+        "No thanks.",
+        "Is that all?",
+        "I wanted something shiny.",
+        "That was not treasure.",
+        "Maybe bring snacks."
+      ]
+    }
+  },
+  "Joke": {
+    "greedy": {
+      "lines": [
+        "Hehe!",
+        "That was funny.",
+        "That joke is mine now.",
+        "I’d trade for that joke.",
+        "Worth one shiny pebble."
+      ],
+      "fail": [
+        "No.",
+        "Bad trade.",
+        "That joke was empty.",
+        "I want a better one.",
+        "Not worth a pebble."
+      ]
+    }
+  },
+  "Mean": {
+    "greedy": {
+      "lines": [
+        "That was sneaky.",
+        "Good bargain voice.",
+        "You sound like a trader.",
+        "That had a price.",
+        "I’ll allow it."
+      ],
+      "fail": [
+        "Too mean.",
+        "Bad deal.",
+        "No trade.",
+        "That was not shiny.",
+        "I don’t like that price."
+      ]
+    }
+  }
+}
+{
+  "Intro": {
+    "wise": {
+      "lines": [
+        "Hi!",
+        "I was thinking.",
+        "Rocks are very old.",
+        "The sky is big today.",
+        "Sometimes I blink slowly."
+      ]
+    },
+    "wise_player_child": {
+      "lines": [
+        "Hi!",
+        "I thought about it.",
+        "I made a good choice.",
+        "I waited and nothing exploded.",
+        "I know things now."
+      ]
+    }
+  },
+  "Friendly": {
+    "wise": {
+      "lines": [
+        "That was kind.",
+        "Nice words are good.",
+        "That makes sense.",
+        "I will think about that.",
+        "You said a good thing."
+      ],
+      "fail": [
+        "I don’t know.",
+        "My thoughts are sleeping.",
+        "Maybe later.",
+        "That was too many words.",
+        "I forgot the wise part."
+      ]
+    }
+  },
+  "Joke": {
+    "wise": {
+      "lines": [
+        "Hehe.",
+        "That was funny.",
+        "A wise joke.",
+        "My brain laughed.",
+        "I understand. Mostly."
+      ],
+      "fail": [
+        "I don’t get it.",
+        "Was that the joke?",
+        "My brain fell down.",
+        "That was not wise.",
+        "Maybe the joke is hiding."
+      ]
+    }
+  },
+  "Mean": {
+    "wise": {
+      "lines": [
+        "That was grumpy wisdom.",
+        "I see your angry idea.",
+        "You sound like a tiny elder.",
+        "That was almost wise.",
+        "I will allow the grumble."
+      ],
+      "fail": [
+        "That was not kind.",
+        "Mean words are heavy.",
+        "I don’t like that.",
+        "That was bad wisdom.",
+        "Please use nicer thoughts."
+      ]
+    }
+  }
+}

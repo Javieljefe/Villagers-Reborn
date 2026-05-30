@@ -62,6 +62,46 @@ public class HumanVillagerSounds {
                     () -> SoundEvent.createVariableRangeEvent(
                             ResourceLocation.fromNamespaceAndPath("slimpatch", "female_death")));
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> WEDDING_CUTSCENE_1 =
+            SOUND_EVENTS.register("wedding_cutscene_1",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("slimpatch", "wedding_cutscene_1")));
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> WEDDING_CUTSCENE_2 =
+            SOUND_EVENTS.register("wedding_cutscene_2",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("slimpatch", "wedding_cutscene_2")));
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> WEDDING_CUTSCENE_3 =
+            SOUND_EVENTS.register("wedding_cutscene_3",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("slimpatch", "wedding_cutscene_3")));
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> WEDDING_CUTSCENE_4 =
+            SOUND_EVENTS.register("wedding_cutscene_4",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("slimpatch", "wedding_cutscene_4")));
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> FAMILY_CUTSCENE_1 =
+            SOUND_EVENTS.register("family_cutscene_1",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("slimpatch", "family_cutscene_1")));
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> FAMILY_CUTSCENE_2 =
+            SOUND_EVENTS.register("family_cutscene_2",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("slimpatch", "family_cutscene_2")));
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> FAMILY_CUTSCENE_3 =
+            SOUND_EVENTS.register("family_cutscene_3",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("slimpatch", "family_cutscene_3")));
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> FAMILY_CUTSCENE_4 =
+            SOUND_EVENTS.register("family_cutscene_4",
+                    () -> SoundEvent.createVariableRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("slimpatch", "family_cutscene_4")));
+
     public static SoundEvent maleClick() {
         return MALE_CLICK.get();
     }
@@ -100,6 +140,38 @@ public class HumanVillagerSounds {
 
     public static SoundEvent femaleDeath() {
         return FEMALE_DEATH.get();
+    }
+
+    public static SoundEvent weddingCutscene1() {
+        return WEDDING_CUTSCENE_1.get();
+    }
+
+    public static SoundEvent weddingCutscene2() {
+        return WEDDING_CUTSCENE_2.get();
+    }
+
+    public static SoundEvent weddingCutscene3() {
+        return WEDDING_CUTSCENE_3.get();
+    }
+
+    public static SoundEvent weddingCutscene4() {
+        return WEDDING_CUTSCENE_4.get();
+    }
+
+    public static SoundEvent familyCutscene1() {
+        return FAMILY_CUTSCENE_1.get();
+    }
+
+    public static SoundEvent familyCutscene2() {
+        return FAMILY_CUTSCENE_2.get();
+    }
+
+    public static SoundEvent familyCutscene3() {
+        return FAMILY_CUTSCENE_3.get();
+    }
+
+    public static SoundEvent familyCutscene4() {
+        return FAMILY_CUTSCENE_4.get();
     }
 
     public static void register(IEventBus eventBus) {

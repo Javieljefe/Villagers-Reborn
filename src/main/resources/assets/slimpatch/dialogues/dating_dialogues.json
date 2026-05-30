@@ -1,0 +1,596 @@
+{
+  "Intro": {
+    "friendly": {
+      "lines": [
+        "I like how easy it feels to be close to you.",
+        "You have a way of making even small moments feel special.",
+        "I was trying to act normal, but you make that difficult.",
+        "I like this. Just talking with you, being near you... all of it.",
+        "There is something about you that makes me smile before you even say anything."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "I get nervous around you, but I think I would miss the feeling if it stopped.",
+        "You make silence feel less awkward. That is new for me.",
+        "I keep trying to act normal around you. It is not going very well.",
+        "I like being close to you. I am just terrible at looking calm about it.",
+        "Every time you look at me, I forget what I was pretending to think about."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "You keep looking at me like that, and I am going to forget what I was doing.",
+        "I like this. You, me, this little moment before one of us says something foolish.",
+        "I was behaving perfectly well until you got close.",
+        "There is something very distracting about you.",
+        "If you are trying to make me think about you all day, it is working."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "I keep telling myself this is a bad investment. I am starting to think I am wrong.",
+        "You are becoming a very distracting expense in my day.",
+        "I was counting profits. Then I started thinking about you. Terrible for business.",
+        "I like having you close. Do not make me put a price on that.",
+        "Some things are worth more than emeralds. Annoyingly, you might be one of them."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "You are very distracting. I hope you are proud of yourself.",
+        "I was having a perfectly normal day until you made it complicated.",
+        "Do not look so pleased. I am only happy to see you a little.",
+        "You make it hard to stay annoyed. That is irritating.",
+        "I still do not know what to do with you. That might be the problem."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "You are still far too easy to notice.",
+        "I was doing fine before you started being interesting.",
+        "Do not look so smug. I only like you a reasonable amount.",
+        "You make it very hard to pretend I am unimpressed.",
+        "I have not decided if you are trouble or entertainment. Maybe both."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "Some silences say more when you are near.",
+        "I have learned not to ignore what I feel around you.",
+        "You make patience feel less like waiting and more like wanting.",
+        "There is a quiet pull between us. I think we both know it.",
+        "I was trying to think clearly. Then you made that difficult."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "I can face a lot of things without blinking. You are not one of them.",
+        "Being close to you makes me feel bold in a completely different way.",
+        "I like this feeling. It is a little dangerous, but I like it.",
+        "You make calm moments feel like something is about to happen.",
+        "I have walked into danger with less trouble than I have walking up to you."
+      ]
+    }
+  },
+  "Friendly": {
+    "friendly": {
+      "lines": [
+        "When you talk to me like that, it is really hard not to get attached.",
+        "That was sweet. You are very good at making me feel wanted.",
+        "I like when you are gentle with me. It stays with me longer than you think.",
+        "You keep finding little ways to make me like you more.",
+        "That was kind of unfair. Now I am going to think about it for ages."
+      ],
+      "fail": [
+        "That was almost sweet. I think the words got a little lost.",
+        "I know you were trying to be kind, but that came out strangely.",
+        "I wanted that to sound romantic. It did not quite get there.",
+        "That was nice in theory. Very confusing in practice.",
+        "You are lucky I like the effort, because the delivery needs help."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "When you are sweet to me, I do not know where to put all the feelings.",
+        "That was kind. Now I have to pretend it did not affect me too much.",
+        "You make me feel safe, and that is a very dangerous thing to get used to.",
+        "I like how gentle you are with me. It makes it harder to stay quiet.",
+        "That made me happy. I am trying not to make it obvious."
+      ],
+      "fail": [
+        "I think you meant that kindly, but my nerves did not understand it.",
+        "That was almost sweet. I just got lost somewhere in the middle.",
+        "I wanted to react better, but my brain stopped helping.",
+        "That came out a little strange. I am still trying to decide how strange.",
+        "I know you were trying. I think that counts for something."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "When you are sweet to me, it is honestly unfair.",
+        "I like this side of you. It makes it very hard to look away.",
+        "You say things like that and expect me to act normal?",
+        "That was gentle. I did not know I needed that from you.",
+        "You make kindness feel a little dangerous."
+      ],
+      "fail": [
+        "That was almost sweet. Almost.",
+        "I know what you were trying to do, but you lost me halfway.",
+        "You are lucky I like the effort.",
+        "That sounded nicer in your head, didn't it?",
+        "I wanted that to work more than it did."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "That was sweet. Suspiciously sweet.",
+        "You keep being kind to me and I might start giving discounts.",
+        "I like when you talk like that. It feels... expensive, somehow.",
+        "That made me feel valued. I usually charge extra for that.",
+        "You are bad for my greed. I mean that as a compliment."
+      ],
+      "fail": [
+        "That was kind, but I am not sure it was worth much.",
+        "I see what you were trying to do. The execution was questionable.",
+        "That almost sounded valuable.",
+        "I appreciate the effort. I would not appraise it highly, but I appreciate it.",
+        "You tried to be sweet. I will give you partial credit."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "That was nice. Do not make a big deal out of it.",
+        "You are being sweet again. It is getting harder to complain.",
+        "I hate how much that worked.",
+        "Fine. That made me feel better.",
+        "You always know exactly how to ruin my bad mood."
+      ],
+      "fail": [
+        "That was supposed to be sweet, wasn't it?",
+        "I know you tried. I am trying not to hold that against you.",
+        "That was nice in a very clumsy way.",
+        "You almost made a point. Almost.",
+        "I appreciate the effort. I reserve the right to complain about it."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "That was sweet. Unexpectedly useful of you.",
+        "I suppose you can be charming when you stop trying so hard.",
+        "That almost made me say something nice. Dangerous.",
+        "You are getting better at knowing what I like.",
+        "That was softer than I expected. I did not hate it."
+      ],
+      "fail": [
+        "That was supposed to be sweet? Interesting choice.",
+        "I see the idea. The result was less impressive.",
+        "Try not to sound so unsure next time.",
+        "That was almost nice, if I squint emotionally.",
+        "You are lucky I am in a generous mood."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "Kindness means more when it comes from someone who knows where to place it.",
+        "You have a gentle way of reaching me.",
+        "That was simple, and somehow exactly enough.",
+        "You are careful with my heart. I notice that.",
+        "There is comfort in the way you speak to me."
+      ],
+      "fail": [
+        "The feeling was there, but the words wandered.",
+        "I think you meant well. Meaning well is not always enough.",
+        "That was close to kindness, but not quite shaped like it.",
+        "I heard the intention more clearly than the sentence.",
+        "You reached for something tender and missed by a little."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "That hit somewhere softer than I expected.",
+        "You make kindness feel like courage.",
+        "I like when you speak to me like that. It makes me want to stay close.",
+        "That was gentle. I am not used to needing gentle things.",
+        "You have a way of making me lower my guard."
+      ],
+      "fail": [
+        "I know you meant well, but that one missed.",
+        "That sounded like it was trying to be sweet and got lost.",
+        "I appreciate the attempt. The landing was rough.",
+        "You aimed for my heart and hit my confusion instead.",
+        "That almost worked. Almost."
+      ]
+    }
+  },
+  "Joke": {
+    "friendly": {
+      "lines": [
+        "I hate that you made me laugh at that.",
+        "That was awful. Why am I smiling?",
+        "You are ridiculous, and somehow that is working for you.",
+        "I should not find that charming, but here we are.",
+        "If your plan was to make me laugh and forget what I was saying, it worked."
+      ],
+      "fail": [
+        "That joke fell over before it reached the end.",
+        "I like you, but I am not rewarding that one with a laugh.",
+        "That was brave. Not funny, but brave.",
+        "I think the joke got nervous and ran away.",
+        "I am smiling because of you, not because that joke deserved it."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "That was so stupid. I liked it.",
+        "I laughed before I could hide it. That is your fault.",
+        "You make it very hard to stay quietly mysterious.",
+        "That joke should not have worked on me, but it did.",
+        "I am smiling too much now. Please take responsibility."
+      ],
+      "fail": [
+        "I think I panicked before I found the funny part.",
+        "Was I supposed to laugh there? I wanted to.",
+        "That joke made me nervous for the joke.",
+        "I like you, but I cannot defend that one.",
+        "Maybe try it again when both of us are less embarrassed."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "I hate that you made me laugh at that.",
+        "You are ridiculous. Unfortunately, I like ridiculous.",
+        "That was not funny enough to deserve this smile, but here we are.",
+        "Keep making me laugh like that and I might get attached.",
+        "You are dangerously charming when you stop trying so hard."
+      ],
+      "fail": [
+        "That joke needed saving, and I am not sure even I can save it.",
+        "I like you, but I will not pretend that was funny.",
+        "That was a bold little disaster.",
+        "You almost had me. Then the joke happened.",
+        "I am smiling because of you, not because of the joke."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "That laugh was free. Do not get used to it.",
+        "That was stupid. I enjoyed it against my better judgment.",
+        "You are lucky charm has no market price.",
+        "I should charge you for making me laugh that easily.",
+        "That joke was worth at least one emerald. Maybe half."
+      ],
+      "fail": [
+        "I want a refund for that joke.",
+        "That was not worth the time it took to hear.",
+        "I have heard better jokes from villagers selling beetroot.",
+        "That joke lost value very quickly.",
+        "I would not trade a stick for that punchline."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "That was stupid. I laughed. I am furious.",
+        "Do not tell anyone I found that funny.",
+        "You are lucky I like terrible jokes more than I admit.",
+        "That was awful. Do it again later.",
+        "I hate that I enjoy your nonsense."
+      ],
+      "fail": [
+        "No. Absolutely not.",
+        "That joke should apologize.",
+        "I have heard better jokes from a broken door.",
+        "I am not laughing, and you cannot make me.",
+        "That was a crime against conversation."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "That was stupid. Unfortunately, it worked.",
+        "I laughed. Do not get used to it.",
+        "You are much funnier when you are not trying to be.",
+        "That joke was a disaster. A charming one, somehow.",
+        "I hate that I enjoyed that."
+      ],
+      "fail": [
+        "That joke deserved silence.",
+        "I have heard better from a villager stuck in a well.",
+        "Do not make me explain why that failed.",
+        "That was embarrassing for both of us, mostly you.",
+        "You almost made me miss awkward silence."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "That was foolish. Wisely foolish, somehow.",
+        "I should have seen that coming. I am glad I did not.",
+        "You caught me off guard. That is not easy.",
+        "A good laugh is rarely wasted.",
+        "You make seriousness feel less necessary."
+      ],
+      "fail": [
+        "That joke had a lesson in it. Unfortunately, the lesson was patience.",
+        "I see the path the joke tried to take. It did not arrive.",
+        "Some thoughts are better left as thoughts.",
+        "I appreciate the attempt more than the result.",
+        "That was not your strongest moment, but it was memorable."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "That was ridiculous. I liked it more than I should.",
+        "You caught me off guard. That does not happen often.",
+        "I was trying to look serious. You ruined it.",
+        "That laugh was your fault.",
+        "You are dangerous when you are being stupid."
+      ],
+      "fail": [
+        "That joke fought bravely and lost.",
+        "I respect the courage. Not the joke.",
+        "That was a bold failure.",
+        "You charged into that punchline with no plan.",
+        "I have seen creepers with better timing."
+      ]
+    }
+  },
+  "Mean": {
+    "friendly": {
+      "lines": [
+        "That was a little sharp, but I know you well enough to hear the teasing.",
+        "You are lucky your face makes it hard to stay annoyed.",
+        "That tone would bother me more if I did not know you cared.",
+        "A little teasing is fine. Just do not get too proud of yourself.",
+        "You can be difficult, but I suppose I like that more than I should."
+      ],
+      "fail": [
+        "That did not feel like teasing.",
+        "Please do not use that tone with me. Not like that.",
+        "I know you can be kinder than that.",
+        "That hurt more because it came from you.",
+        "I thought we were past talking to each other that way."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "That was sharp, but I think you were teasing. I hope you were teasing.",
+        "I can handle a little bite from you. A little.",
+        "That made me nervous, but not enough to run away.",
+        "You are lucky I know there is something softer under that tone.",
+        "That was bold. I am pretending I did not like it."
+      ],
+      "fail": [
+        "That did not feel like teasing.",
+        "Please do not make me feel small. Not you.",
+        "I can be quiet without needing to be hurt.",
+        "That made me want to disappear for a minute.",
+        "I thought you would be more careful with me."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "That mouth of yours is going to get you in trouble one day.",
+        "You are playing with fire. I hope you know that.",
+        "I should be annoyed. I am not. That is the problem.",
+        "You really do enjoy testing me, don't you?",
+        "That was sharp. I like sharp, in small doses."
+      ],
+      "fail": [
+        "That was not teasing. That was just mean.",
+        "Do not confuse chemistry with permission to hurt me.",
+        "I like a little bite, not cruelty.",
+        "That crossed a line.",
+        "I thought you knew the difference between playful and painful."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "That was bold. I respect a risky move.",
+        "A little bite keeps things interesting.",
+        "You drive a hard bargain. I like that.",
+        "That was sharp, but not without value.",
+        "Careful. I might start enjoying this negotiation."
+      ],
+      "fail": [
+        "That was not clever. That was just cheap.",
+        "Do not mistake my patience for a bargain.",
+        "If you are going to be harsh, at least be worth listening to.",
+        "That cost you more than you think.",
+        "I do not like being treated like something you can haggle down."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "Good. Finally, someone with a little edge.",
+        "I can work with that.",
+        "That was harsh. I respect the honesty.",
+        "You are getting bold with me. Interesting.",
+        "A little bite suits you."
+      ],
+      "fail": [
+        "Do not push your luck.",
+        "That was not teasing. That was you being foolish.",
+        "I like attitude. I do not like disrespect.",
+        "Try that again and see how far it gets you.",
+        "You missed the line between sharp and cruel."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "There it is. I knew you had some bite.",
+        "Good. I was worried you were getting too soft.",
+        "That was bold. I respect bold.",
+        "You are learning how to keep up with me.",
+        "Sharp enough to be interesting. Not sharp enough to win."
+      ],
+      "fail": [
+        "No. That was not clever, just irritating.",
+        "If you are going to challenge me, do it properly.",
+        "That missed the mark and hit my patience.",
+        "Do not confuse being mean with being interesting.",
+        "Try that again and I might actually get annoyed."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "Blunt words can still be honest, if used with care.",
+        "That was sharp, but not without truth.",
+        "You are testing the edge between honesty and provocation.",
+        "I can accept a hard truth when it is not thrown carelessly.",
+        "There is something interesting in the way you challenge me."
+      ],
+      "fail": [
+        "That was not truth. That was impatience wearing its clothes.",
+        "You can be direct without being careless.",
+        "That cut deeper than it needed to.",
+        "If you want to be heard, do not wound first.",
+        "I expected more wisdom from someone I let this close."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "Good. I like someone who is not afraid to push back.",
+        "That was sharp. I can take sharp.",
+        "You have fire in you. I noticed.",
+        "A little challenge suits you.",
+        "That almost sounded like a dare."
+      ],
+      "fail": [
+        "That was not courage. That was carelessness.",
+        "Do not use honesty as an excuse to be cruel.",
+        "If you are going to challenge me, do it with respect.",
+        "That hit harder than it needed to.",
+        "I let you close. Do not make me regret it."
+      ]
+    }
+  },
+  "Flirt": {
+    "friendly": {
+      "lines": [
+        "You cannot say things like that and expect me to keep a straight face.",
+        "That was smooth. I am annoyed that it worked.",
+        "I like hearing that from you more than I probably should admit.",
+        "You are getting very good at making me forget what I was doing.",
+        "If you were trying to make my heart do something stupid, congratulations."
+      ],
+      "fail": [
+        "That was almost charming. Almost.",
+        "I like you, but that line needs rescuing.",
+        "You started strong and then completely abandoned the plan.",
+        "That was cute in a very messy way.",
+        "Try that again, but this time pretend you know what you are doing."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "You cannot just say that while I am trying to look normal.",
+        "I liked that. I am not going to say it louder.",
+        "That made my thoughts trip over each other.",
+        "I was not ready for that, but I am not complaining.",
+        "If I look away, it is because that worked."
+      ],
+      "fail": [
+        "That was too much at once. My brain left.",
+        "I like you, but please do not attack me with romance like that.",
+        "That line arrived before I was emotionally prepared.",
+        "I think you made both of us uncomfortable that time.",
+        "Try again, but maybe give me a warning first."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "Say that again. Slowly.",
+        "Now that was worth hearing.",
+        "You are getting very good at making me forget myself.",
+        "That was smooth. Annoyingly smooth.",
+        "If that was your plan, it worked."
+      ],
+      "fail": [
+        "That was almost charming. Then it tripped over itself.",
+        "I admire the confidence. The sentence did not survive it.",
+        "You rushed it. I noticed.",
+        "Try again when you are not fighting your own nerves.",
+        "I like you too much to let you think that worked."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "That was good. I might have paid to hear it twice.",
+        "You are getting dangerously good at this.",
+        "Keep talking like that and I may forget to ask what is in it for me.",
+        "I like that tone. It makes terrible financial sense.",
+        "That one earned you a very interested look."
+      ],
+      "fail": [
+        "That was a poor investment of charm.",
+        "I see the attempt. The profit was low.",
+        "You almost had me. Then the words got involved.",
+        "That line needs better materials.",
+        "I like you, so I will pretend that was worth something."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "That was annoyingly effective.",
+        "You are enjoying this far too much.",
+        "Do not smile like that. It makes it harder to argue.",
+        "Fine. That one got to me.",
+        "You are very pleased with yourself, aren't you?"
+      ],
+      "fail": [
+        "That was terrible. I almost feel bad for you.",
+        "No. Try again when your dignity returns.",
+        "I like you, but I am not lowering my standards that much.",
+        "That line limped in here and died.",
+        "You made it weird. Congratulations."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "Not bad. You are almost dangerous when you try.",
+        "That was better than I expected. Annoying.",
+        "You do know how to get under my skin.",
+        "I should not like that as much as I do.",
+        "Keep talking like that and I might start taking you seriously."
+      ],
+      "fail": [
+        "That was painful to watch.",
+        "You tried to be smooth and somehow tripped standing still.",
+        "I like confidence. That was not confidence.",
+        "You are lucky I find effort mildly attractive.",
+        "That line needs to be buried somewhere quiet."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "That was not subtle. I do not mind.",
+        "You know exactly what you are doing, don't you?",
+        "I have heard sweeter words. Few felt this sincere.",
+        "You are making it difficult to stay composed.",
+        "That was bold enough to be honest."
+      ],
+      "fail": [
+        "That was almost charming. Then it became a lesson in timing.",
+        "You rushed the feeling before the words were ready.",
+        "I think your heart moved faster than your tongue.",
+        "There was promise in that. It simply got lost.",
+        "Try again when you are speaking to me, not performing for me."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "That was bold. I like bold.",
+        "You say that like you know exactly what it does to me.",
+        "I was ready for a lot of things. Not that.",
+        "You are making it very hard to keep my balance.",
+        "That one got through my armor."
+      ],
+      "fail": [
+        "That was brave. Terrible, but brave.",
+        "You rushed in without a plan again.",
+        "I like confidence. That was panic wearing a helmet.",
+        "Not your strongest move, but I respect the attempt.",
+        "Try again when your courage and your words are on speaking terms."
+      ]
+    }
+  }
+}

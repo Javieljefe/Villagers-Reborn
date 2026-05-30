@@ -4,6 +4,7 @@ import com.javic.slimpatch.ModEntities;
 import com.javic.slimpatch.SlimPatch;
 import com.javic.slimpatch.entity.HumanWanderingTraderEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -14,13 +15,11 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
 import java.util.List;
 import java.util.Random;
 
-@EventBusSubscriber(modid = SlimPatch.MODID)
 public class HumanWanderingTraderSpawner {
 
     private static final int CHECK_INTERVAL_TICKS = 168000;
@@ -63,10 +62,7 @@ public class HumanWanderingTraderSpawner {
             trader.finalizeSpawn(level, level.getCurrentDifficultyAt(surfacePos), MobSpawnType.NATURAL, null);
             level.addFreshEntity(trader);
 
-            player.displayClientMessage(Component.literal("§eA merchant has arrived nearby."), false);
-
-            SlimPatch.LOGGER.info("[SlimPatch] Wandering Trader spawneado en {} ({})",
-                    surfacePos, level.dimension().location());
+            player.displayClientMessage(Component.translatable("slimpatch.message.merchant_arrived_nearby").withStyle(ChatFormatting.YELLOW), false);
         }
     }
 }

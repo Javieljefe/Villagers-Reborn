@@ -14,13 +14,17 @@ import java.util.UUID;
 public class VillagerCooldownsPacket implements CustomPacketPayload {
 
     private final UUID uuid;
+    private final UUID playerUuid;
     private final int entityId;
     private final Map<String, Integer> cooldowns;
+    private final long giftCooldownRemainingMs;
 
-    public VillagerCooldownsPacket(UUID uuid, int entityId, Map<String, Integer> cooldowns) {
+    public VillagerCooldownsPacket(UUID uuid, UUID playerUuid, int entityId, Map<String, Integer> cooldowns, long giftCooldownRemainingMs) {
         this.uuid = uuid;
+        this.playerUuid = playerUuid;
         this.entityId = entityId;
         this.cooldowns = cooldowns;
+        this.giftCooldownRemainingMs = giftCooldownRemainingMs;
     }
 
     public static final ResourceLocation ID =
@@ -32,7 +36,9 @@ public class VillagerCooldownsPacket implements CustomPacketPayload {
 
     private static void encode(FriendlyByteBuf buf, VillagerCooldownsPacket packet) {
         buf.writeUUID(packet.uuid);
+        buf.writeUUID(packet.playerUuid);
         buf.writeVarInt(packet.entityId);
+        buf.writeVarLong(packet.giftCooldownRemainingMs);
         buf.writeVarInt(packet.cooldowns.size());
         for (Map.Entry<String, Integer> entry : packet.cooldowns.entrySet()) {
             buf.writeUtf(entry.getKey());
@@ -42,7 +48,9 @@ public class VillagerCooldownsPacket implements CustomPacketPayload {
 
     private static VillagerCooldownsPacket decode(FriendlyByteBuf buf) {
         UUID uuid = buf.readUUID();
+        UUID playerUuid = buf.readUUID();
         int entityId = buf.readVarInt();
+        long giftCooldownRemainingMs = buf.readVarLong();
         int size = buf.readVarInt();
         Map<String, Integer> cooldowns = new HashMap<>();
         for (int i = 0; i < size; i++) {
@@ -50,7 +58,7 @@ public class VillagerCooldownsPacket implements CustomPacketPayload {
             int seconds = buf.readVarInt();
             cooldowns.put(option, seconds);
         }
-        return new VillagerCooldownsPacket(uuid, entityId, cooldowns);
+        return new VillagerCooldownsPacket(uuid, playerUuid, entityId, cooldowns, giftCooldownRemainingMs);
     }
 
     @Override
@@ -60,15 +68,8 @@ public class VillagerCooldownsPacket implements CustomPacketPayload {
 
     public static void handle(VillagerCooldownsPacket msg, IPayloadContext ctx) {
         ctx.enqueueWork(() -> {
-            SlimPatch.LOGGER.debug("[SlimPatch] Recibidos cooldowns para aldeano UUID={} (ID={}) → {}",
-                    msg.uuid, msg.entityId, msg.cooldowns);
-
-            try {
-                Class<?> storageClass = Class.forName("com.javic.slimpatch.network.VillagerCooldownsStorage");
-                var method = storageClass.getMethod("setCooldowns", UUID.class, Map.class);
-                method.invoke(null, msg.uuid, msg.cooldowns);
-            } catch (Throwable ignored) {
-            }
+            VillagerCooldownsStorage.setCooldowns(msg.uuid, msg.playerUuid, msg.cooldowns);
+            VillagerCooldownsStorage.setGiftCooldownRemaining(msg.uuid, msg.playerUuid, msg.giftCooldownRemainingMs);
         });
     }
 }

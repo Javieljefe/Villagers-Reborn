@@ -8,14 +8,13 @@ license="All Rights Reserved"
 
 [[mods]] #mandatory
 modId="slimpatch" #mandatory - this must match @Mod("slimpatch") in your main class
-version="1.0.0" #mandatory
+version="1.0.6" #mandatory
 displayName="Villagers Reborn" #mandatory
-authors="JaviC" #optional
+authors="Javieljefe" #optional
 
 # A short description shown in the Mods list
 description='''
-Replaces the vanilla villager model with player-like humans (Steve/Alex style).
-Features gender support (male/female) and persistent randomized skins.
+Replaces vanilla villagers with custom human-like player models.
 '''
 
 # Optional homepage or issue tracker links

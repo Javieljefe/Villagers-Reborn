@@ -1,0 +1,596 @@
+{
+  "Intro": {
+    "friendly": {
+      "lines": [
+        "Hi, my love.",
+        "There you are, honey.",
+        "I like how normal it feels to be close to you now.",
+        "You make even the quiet parts of life feel good.",
+        "I still smile before I know what I am going to say to you."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "Hi, my love.",
+        "Hey... honey.",
+        "I still get nervous around you. I think I like that part.",
+        "Being this close to you feels easier now, but not less special.",
+        "I love the quiet moments with you. They feel safe."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "Hello, darling.",
+        "There you are, my love.",
+        "I still like the way the world feels when you are close.",
+        "Being yours has not made you any less distracting.",
+        "I thought marriage might make this feeling calmer. It did not."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "Hello, my treasure.",
+        "There you are, dear.",
+        "I still think marrying you was my best investment.",
+        "You are terrible for my focus and excellent for my mood.",
+        "I used to count emeralds. Now I keep losing count when you are near."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "Hi, love. Try not to look too pleased about it.",
+        "There you are. Good.",
+        "I was comfortable. Then you showed up and made me happier. Rude.",
+        "You are still my favorite problem.",
+        "I suppose being married to you is not the worst thing that ever happened to me."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "Hello, darling. Try not to get too smug about it.",
+        "There you are. I suppose I was starting to enjoy the silence less.",
+        "You are still trouble. Fortunately, I have excellent taste in trouble.",
+        "I married you, so I suppose I am responsible for this now.",
+        "Do not look at me like that unless you plan to make it worth my time."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "Hello, my love.",
+        "There you are, dear.",
+        "I still find peace in being close to you.",
+        "Marriage did not make you less fascinating. It only gave me more time to notice.",
+        "Some days feel easier simply because you are part of them."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "Hello, love.",
+        "There you are, my heart.",
+        "I still feel stronger with you beside me.",
+        "Whatever comes next, I am glad it is with you.",
+        "Being married to you feels like the bravest choice I ever made."
+      ]
+    }
+  },
+  "Friendly": {
+    "friendly": {
+      "lines": [
+        "You still know exactly how to make me feel loved.",
+        "That was sweet. I hope you know I never get tired of that.",
+        "I like being cared for by you. It feels different.",
+        "You make home feel like a person, not a place.",
+        "That made me feel lucky. I mean that."
+      ],
+      "fail": [
+        "That was sweet in a very confusing way.",
+        "I know what you meant. The words just took the scenic route.",
+        "That almost sounded romantic. Almost.",
+        "I love you, but that sentence needs help.",
+        "You tried. I am choosing to find that charming."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "You always know how to make me feel safe.",
+        "That was sweet. I still do not know how to answer you properly.",
+        "I like when you are gentle with me. It feels like home.",
+        "You make it easier to say what I feel.",
+        "That made me feel loved in the softest way."
+      ],
+      "fail": [
+        "I know you meant that kindly. I just got a little tangled up.",
+        "That was sweet, but I think my brain hid from it.",
+        "I wanted to answer better, but you caught me off guard.",
+        "That almost landed. I might need a second.",
+        "I love you, but that came out a little confusing."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "You still know how to make me feel chosen.",
+        "That was sweet. I hope you never stop saying things like that.",
+        "I love when you are gentle with me. It makes everything else fade a little.",
+        "You make ordinary words sound like promises.",
+        "That reminded me why I gave you my heart in the first place."
+      ],
+      "fail": [
+        "That was meant to be sweet, wasn't it?",
+        "I love you, but that sentence lost its way.",
+        "The feeling was there. The words needed help.",
+        "That almost made my heart melt. Almost.",
+        "You tried to be romantic. I will give you credit for courage."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "That was sweet. I would call it priceless, but you know how I feel about prices.",
+        "You make me feel valued, and I do not say that lightly.",
+        "I like when you are soft with me. It feels rare.",
+        "That was worth more than a pocket full of emeralds.",
+        "You keep giving me reasons to be less selfish. Very inconvenient."
+      ],
+      "fail": [
+        "That was meant to be sweet, yes? The value was unclear.",
+        "I love you, but that one needs a better appraisal.",
+        "The intention was good. The delivery was... discounted.",
+        "That almost sounded romantic. Almost profitable, even.",
+        "You tried. I will not charge you for the attempt."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "That was sweet. I am choosing not to complain.",
+        "You still know how to ruin a perfectly good bad mood.",
+        "Fine. That made me feel loved.",
+        "I hate how easily you can soften me.",
+        "You are being kind again. It is suspiciously effective."
+      ],
+      "fail": [
+        "That was supposed to be sweet, wasn't it?",
+        "I love you, but that came out like a dropped potato.",
+        "The thought was nice. The words need supervision.",
+        "That almost worked. Do not celebrate.",
+        "You tried. I will give you that much."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "That was sweet. I am choosing to let it affect me.",
+        "You still know how to make me soften. Annoying talent.",
+        "I like when you are gentle with me. Do not repeat that.",
+        "That almost made me say something embarrassingly sincere.",
+        "You are very good at getting past my defenses."
+      ],
+      "fail": [
+        "That was meant to be sweet? You hid it well.",
+        "I love you, but that was a weak attempt.",
+        "Try again without sounding like you are negotiating with a fence.",
+        "That almost worked. Then it got lost.",
+        "The intention was fine. The execution was tragic."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "You still know where to place your kindness.",
+        "That was gentle. I have learned to treasure that from you.",
+        "You make love feel steady, not fragile.",
+        "I trust the way you care for me.",
+        "That reached me quietly. Those things often last the longest."
+      ],
+      "fail": [
+        "I know your heart was in the right place. The words wandered.",
+        "That was almost tender. Almost.",
+        "I understood the feeling more than the sentence.",
+        "You meant well. I will hold on to that part.",
+        "That needed a little more care before it reached me."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "You still know how to reach the softest part of me.",
+        "That was gentle. I trust gentleness more when it comes from you.",
+        "You make me feel safe in a way I did not know I needed.",
+        "That kind of love is worth protecting.",
+        "I would face anything for a life that feels like this."
+      ],
+      "fail": [
+        "I know you meant well, but that one missed.",
+        "That was meant to be sweet. I could tell. Barely.",
+        "I love you, but that landed a little rough.",
+        "The heart was there. The aim was not.",
+        "Try again. I know you can say it better."
+      ]
+    }
+  },
+  "Joke": {
+    "friendly": {
+      "lines": [
+        "That was awful. I married you anyway, so I suppose this is my fault.",
+        "I hate that I still laugh at your jokes.",
+        "You make me laugh even when I am trying not to.",
+        "That joke was terrible, but your face made it worth it.",
+        "I knew what I was getting into, and somehow I still stayed."
+      ],
+      "fail": [
+        "I love you, but I cannot support that joke.",
+        "That was not your best work. Or your middle work.",
+        "I am going to pretend I did not hear that.",
+        "That joke needs to sleep outside tonight.",
+        "You are lucky marriage is not based on comedy."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "That was so silly. I hate that it worked.",
+        "You made me laugh before I could hide it.",
+        "I should be used to your jokes by now, but somehow I am not.",
+        "That was terrible. Please do not look so proud.",
+        "I love when you make me laugh like that."
+      ],
+      "fail": [
+        "I think I missed the joke and found the awkward part instead.",
+        "That one made both of us uncomfortable, I think.",
+        "I love you, but I cannot laugh at that in good conscience.",
+        "Maybe that joke needs a quiet place to recover.",
+        "I wanted to laugh. I really did."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "That was ridiculous. Come here before I change my mind about laughing.",
+        "You are lucky I find you charming.",
+        "I married you, so I suppose your terrible jokes are legally mine now.",
+        "That joke was awful, but your smile saved it.",
+        "You make me laugh in the most unfair ways."
+      ],
+      "fail": [
+        "I love you too much to lie and say that was funny.",
+        "That joke needed romance. And structure. And maybe a new beginning.",
+        "You are still attractive. The joke is not.",
+        "I think that punchline left before you finished speaking.",
+        "That was not your finest work, darling."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "That laugh was free. Do not tell anyone.",
+        "I married you, so I suppose your terrible jokes are part of the contract.",
+        "That was stupid. Somehow, I still feel richer for hearing it.",
+        "You are lucky I find you charming when you are ridiculous.",
+        "That joke had no value, but your face made up the difference."
+      ],
+      "fail": [
+        "I want a refund for that joke, and I did not even pay.",
+        "That punchline was a bad deal.",
+        "I love you, but that joke is not coming into our home.",
+        "That was worth less than a damaged carrot.",
+        "Next time, invest in a better setup."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "That was stupid. I laughed. I hate this marriage.",
+        "Do not tell anyone I enjoy your jokes.",
+        "I married you, so I suppose I earned this punishment.",
+        "That was awful. Say it again later.",
+        "You are lucky I like your nonsense."
+      ],
+      "fail": [
+        "No.",
+        "That joke should be ashamed of itself.",
+        "I love you, but I refuse to laugh at that.",
+        "That was not a joke. That was noise with confidence.",
+        "I have heard better timing from a falling anvil."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "That was stupid. I hate that I laughed.",
+        "You are lucky I find you entertaining.",
+        "I married you, so I suppose your bad jokes are my problem now.",
+        "That joke was awful. Your confidence saved it.",
+        "You are funnier when you are not trying. Unfortunately, that still counts."
+      ],
+      "fail": [
+        "No. Absolutely not.",
+        "That joke deserved a worse audience.",
+        "I love you, but I refuse to reward that.",
+        "That was embarrassing, and I was only nearby.",
+        "Try again when the punchline has a reason to exist."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "That was foolish. I am glad I married someone foolish in the right ways.",
+        "You still surprise me. Usually at the expense of dignity.",
+        "A laugh shared with you is rarely wasted.",
+        "That was not wise. It was, however, effective.",
+        "You make seriousness feel overrated."
+      ],
+      "fail": [
+        "That joke taught me patience.",
+        "I love you, but that was not one of your wiser moments.",
+        "The joke had a destination. It did not arrive.",
+        "Some thoughts are better left uncooked.",
+        "That was memorable, though not for the reason you hoped."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "That was ridiculous. I am glad I get to hear your nonsense up close.",
+        "You made me laugh when I was trying to look serious.",
+        "I married you, so I suppose your terrible jokes are part of the adventure.",
+        "That joke had no fear. No sense either, but no fear.",
+        "You are lucky I find your foolishness charming."
+      ],
+      "fail": [
+        "That joke charged into battle and fell immediately.",
+        "I love you, but I cannot defend that one.",
+        "That was brave. Very little else, but brave.",
+        "The punchline deserted you.",
+        "Try again when the joke has trained a little."
+      ]
+    }
+  },
+  "Mean": {
+    "friendly": {
+      "lines": [
+        "A little teasing is fine. I know where your heart is.",
+        "You can be difficult, but you are my difficult.",
+        "That was sharp, but I know you did not mean it badly.",
+        "I suppose I married your attitude too.",
+        "You are lucky I know the soft part underneath that tone."
+      ],
+      "fail": [
+        "That did not feel like teasing.",
+        "Do not talk to me like I am not on your side.",
+        "I love you, but that still hurt.",
+        "We can be honest without being cruel.",
+        "I need you to be kinder than that with me."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "That was sharp, but I know your heart better than your tone.",
+        "A little teasing is fine. I trust you.",
+        "You can be blunt with me. Just not too blunt.",
+        "That startled me, but I know you did not mean it badly.",
+        "I suppose I married your rough edges too."
+      ],
+      "fail": [
+        "Please do not make me feel small.",
+        "That hurt more because it came from you.",
+        "I trust you with my heart. Be careful with it.",
+        "I know we are close, but that still crossed a line.",
+        "I need gentleness from you, even when you are upset."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "That was sharp. I suppose I married your edge too.",
+        "You are lucky I enjoy a little danger.",
+        "A little bite from you can be interesting.",
+        "You still know how to test me.",
+        "That tone would annoy me more if I did not like you this much."
+      ],
+      "fail": [
+        "Do not turn tenderness into a weapon.",
+        "I love your fire. I do not love being burned by it.",
+        "That was not teasing. That was careless.",
+        "I let you close enough to hurt me. Please do not prove that was foolish.",
+        "There are softer ways to tell me the truth."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "A little sharpness keeps the market interesting.",
+        "That was bold. I married bold for a reason.",
+        "You drive a hard bargain, even with my patience.",
+        "That tone would bother me more if I did not like owning your attention.",
+        "Careful. I might start charging for how much I enjoy this."
+      ],
+      "fail": [
+        "That was cheap. I expected better from you.",
+        "Do not spend my trust like it is nothing.",
+        "I love a good bargain, not a low blow.",
+        "That cost you more than you think.",
+        "You are not supposed to make me feel like a bad trade."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "Good. I married someone with a spine.",
+        "A little bite keeps things from getting boring.",
+        "That was sharp. I can respect sharp.",
+        "You are getting bold with me. I do not hate it.",
+        "That would annoy me if it came from anyone else."
+      ],
+      "fail": [
+        "Do not push me just because I love you.",
+        "That was not teasing. That was foolish.",
+        "I like honesty. I do not like being jabbed at for sport.",
+        "You missed the line. Try not to make a habit of it.",
+        "I married you, not your worst attitude."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "There it is. I married someone with claws.",
+        "Good. I was worried you were getting too soft.",
+        "That was sharp. I would have been disappointed if it was not.",
+        "You still know how to keep me interested.",
+        "Not bad. You almost sounded like you could win this."
+      ],
+      "fail": [
+        "That was not sharp. That was sloppy.",
+        "Do not mistake being cruel for being clever.",
+        "If you are going to provoke me, do it properly.",
+        "That was beneath you. Unfortunately, I noticed.",
+        "I married your fire, not your carelessness."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "A hard truth can still be loving, when held carefully.",
+        "That was sharp, but I know the hand that held it.",
+        "You challenge me because you trust me to answer.",
+        "I do not mind your edge when your heart is still with me.",
+        "That was bold. I have always liked that in you."
+      ],
+      "fail": [
+        "Do not let familiarity make you careless with me.",
+        "You know me well enough to know that would hurt.",
+        "Love does not make harshness harmless.",
+        "I can accept truth. I will not accept cruelty dressed as truth.",
+        "That was beneath the bond we have built."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "Good. I married someone who can stand their ground.",
+        "That was sharp, but I know your heart is still with me.",
+        "I do not mind a challenge from the person I trust most.",
+        "That fire in you is part of why I chose you.",
+        "You push back. I respect that."
+      ],
+      "fail": [
+        "Do not mistake closeness for permission to wound me.",
+        "That was not strength. That was carelessness.",
+        "I can take a hard truth, but not a careless one.",
+        "I love you, but I will not let that pass.",
+        "If we are a team, speak to me like one."
+      ]
+    }
+  },
+  "Flirt": {
+    "friendly": {
+      "lines": [
+        "You still know how to make me forget what I was doing.",
+        "That worked far too well for someone I already married.",
+        "Say things like that and I might stop pretending I am busy.",
+        "I like when you look at me like you still cannot believe I am yours.",
+        "Keep that up and this conversation is going to get very distracting."
+      ],
+      "fail": [
+        "I love you, but that was not your smoothest moment.",
+        "That was adorable. Not seductive, but adorable.",
+        "You are lucky I am already committed.",
+        "That line tripped over the wedding ring.",
+        "Try again, but with less confidence and more accuracy."
+      ]
+    },
+    "shy": {
+      "lines": [
+        "You still make me forget how to act normal.",
+        "I am married to you and you still manage to fluster me.",
+        "Say that again and I might actually look you in the eyes this time.",
+        "I like when you talk to me like that. More than I can say properly.",
+        "You know exactly what that does to me, don't you?"
+      ],
+      "fail": [
+        "That was a lot. Even for you.",
+        "I love you, but that line arrived very suddenly.",
+        "You made me nervous, but not in the way you planned.",
+        "Maybe try that again with less chaos.",
+        "I think I need a moment after that one."
+      ]
+    },
+    "romantic": {
+      "lines": [
+        "You still know exactly how to make me forget the rest of the room.",
+        "Say that again and I might have trouble pretending we are having a normal conversation.",
+        "That was very unfair of you. I liked it.",
+        "I married you, and somehow you still make me feel like I am falling for you.",
+        "Keep looking at me like that and I will forget what I was about to say."
+      ],
+      "fail": [
+        "That was almost smooth, darling.",
+        "I love you, but that line fell apart beautifully.",
+        "You tried to be dangerous and became adorable instead.",
+        "That was not seductive, but it was very you.",
+        "Try again. I know you can do better than that."
+      ]
+    },
+    "greedy": {
+      "lines": [
+        "That was good. Very good. I may need to collect interest.",
+        "You still know how to make me forget what I was counting.",
+        "I like that tone. It makes me want to make very poor financial decisions.",
+        "If you keep talking like that, I might start calling you priceless.",
+        "That one was worth keeping. Like you."
+      ],
+      "fail": [
+        "That was a risky investment with poor returns.",
+        "I love you, but that line depreciated quickly.",
+        "You tried to be smooth and came out slightly bankrupt.",
+        "That was not your finest offer.",
+        "Try again. I know you have better goods than that."
+      ]
+    },
+    "grumpy": {
+      "lines": [
+        "That was annoyingly good.",
+        "You are enjoying yourself far too much.",
+        "Do not look at me like that. I am trying to stay irritated.",
+        "Fine. That worked. Happy?",
+        "You still know exactly how to make me lose my argument."
+      ],
+      "fail": [
+        "That was terrible. I am embarrassed for both of us.",
+        "I love you, but no.",
+        "That line needs to be taken behind the barn and forgotten.",
+        "You tried to be charming and became a public safety hazard.",
+        "Try again when your mouth is cooperating."
+      ]
+    },
+    "mean": {
+      "lines": [
+        "That was better than I expected. I hate giving you credit.",
+        "You know exactly how to get under my skin.",
+        "Say things like that and I might start behaving badly.",
+        "You are very pleased with yourself. I might allow it.",
+        "That worked. Do not make me admit it twice."
+      ],
+      "fail": [
+        "That was painful, darling.",
+        "You tried to be dangerous and became decorative.",
+        "I love you, but that line should be retired.",
+        "That was not seduction. That was an incident.",
+        "Try again when your confidence has evidence."
+      ]
+    },
+    "wise": {
+      "lines": [
+        "You still know how to disturb my composure.",
+        "That was direct. I appreciate directness from you.",
+        "I have known you long enough to see exactly what you are doing.",
+        "You make wisdom feel slightly overrated.",
+        "That look would have undone me even before I married you."
+      ],
+      "fail": [
+        "That was almost charming. Then it lost its balance.",
+        "I love you, but timing remains a subject you could study.",
+        "The intention was clear. The method was less convincing.",
+        "That was not your finest attempt at temptation.",
+        "Try again when your words are as steady as your feelings."
+      ]
+    },
+    "brave": {
+      "lines": [
+        "That still gets through my armor.",
+        "You say that like you know exactly where my guard is weakest.",
+        "I have faced monsters with less impact than that look.",
+        "Keep that up and I may forget we were having a conversation.",
+        "You still make my heart act like it has never seen danger before."
+      ],
+      "fail": [
+        "That was bold. The rest needs work.",
+        "I love you, but that approach needs a better plan.",
+        "You rushed in again. Very heroic. Very messy.",
+        "That was not your strongest move.",
+        "Try again when your courage and your timing agree."
+      ]
+    }
+  }
+}

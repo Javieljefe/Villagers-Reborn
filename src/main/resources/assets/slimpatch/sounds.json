@@ -91,6 +91,54 @@
       { "name": "slimpatch:female/female_death", "stream": false }
     ]
   },
+  "wedding_cutscene_1": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:wedding_cutscene_1", "stream": true }
+    ]
+  },
+  "wedding_cutscene_2": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:wedding_cutscene_2", "stream": true }
+    ]
+  },
+  "wedding_cutscene_3": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:wedding_cutscene_3", "stream": true }
+    ]
+  },
+  "wedding_cutscene_4": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:wedding_cutscene_4", "stream": true }
+    ]
+  },
+  "family_cutscene_1": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:family_cutscene_1", "stream": true }
+    ]
+  },
+  "family_cutscene_2": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:family_cutscene_2", "stream": true }
+    ]
+  },
+  "family_cutscene_3": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:family_cutscene_3", "stream": true }
+    ]
+  },
+  "family_cutscene_4": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:family_cutscene_4", "stream": true }
+    ]
+  },
   "illager.male.ambient": {
     "replace": true,
     "sounds": [
@@ -143,6 +191,28 @@
     "sounds": [
       { "name": "slimpatch:female/illager/death_1", "stream": false },
       { "name": "slimpatch:female/illager/death_2", "stream": false }
+    ]
+  },
+  "zombie_villager.female.ambient": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:female/zombie_villager/ambient_zombie_villager", "stream": false },
+      { "name": "slimpatch:female/zombie_villager/ambient_zombie_villager2", "stream": false }
+    ]
+  },
+  "zombie_villager.female.hurt": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:female/zombie_villager/hurt_zombie_villager", "stream": false },
+      { "name": "slimpatch:female/zombie_villager/hurt_zombie_villager2", "stream": false },
+      { "name": "slimpatch:female/zombie_villager/hurt_zombie_villager3", "stream": false }
+    ]
+  },
+  "zombie_villager.female.death": {
+    "replace": true,
+    "sounds": [
+      { "name": "slimpatch:female/zombie_villager/death_zombie_villager", "stream": false },
+      { "name": "slimpatch:female/zombie_villager/death_zombie_villager2", "stream": false }
     ]
   }
 }

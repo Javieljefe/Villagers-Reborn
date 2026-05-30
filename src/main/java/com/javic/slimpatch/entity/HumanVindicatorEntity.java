@@ -1,6 +1,6 @@
 package com.javic.slimpatch.entity;
 
-import com.javic.slimpatch.SlimPatch;
+import com.javic.slimpatch.Config;
 import com.javic.slimpatch.sounds.HumanIllagerSounds;
 import com.javic.slimpatch.util.SkinPathHelper;
 import net.minecraft.nbt.CompoundTag;
@@ -36,7 +36,6 @@ public class HumanVindicatorEntity extends Vindicator {
 
     public HumanVindicatorEntity(EntityType<? extends Vindicator> type, Level level) {
         super(type, level);
-        SlimPatch.LOGGER.debug("[SlimPatch] HumanVindicatorEntity construido en nivel {}", level.dimension().location());
     }
 
     @Override
@@ -89,9 +88,6 @@ public class HumanVindicatorEntity extends Vindicator {
             data.putString("slimpatch_gender", gender);
             data.putInt("slimpatch_skin", skinIndex);
             data.putBoolean("slimpatch_initialized", true);
-
-            SlimPatch.LOGGER.info("[SlimPatch] HumanVindicatorEntity spawn → gender={} skin={}", gender, skinIndex);
-
             this.setCustomName(null);
             this.setCustomNameVisible(false);
         } else {
@@ -104,17 +100,17 @@ public class HumanVindicatorEntity extends Vindicator {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return this.isFemale() ? HumanIllagerSounds.femaleAmbient() : HumanIllagerSounds.maleAmbient();
+        return Config.CUSTOM_ILLAGER_SOUNDS.get() ? (this.isFemale() ? HumanIllagerSounds.femaleAmbient() : HumanIllagerSounds.maleAmbient()) : super.getAmbientSound();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return this.isFemale() ? HumanIllagerSounds.femaleHurt() : HumanIllagerSounds.maleHurt();
+        return Config.CUSTOM_ILLAGER_SOUNDS.get() ? (this.isFemale() ? HumanIllagerSounds.femaleHurt() : HumanIllagerSounds.maleHurt()) : super.getHurtSound(source);
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return this.isFemale() ? HumanIllagerSounds.femaleDeath() : HumanIllagerSounds.maleDeath();
+        return Config.CUSTOM_ILLAGER_SOUNDS.get() ? (this.isFemale() ? HumanIllagerSounds.femaleDeath() : HumanIllagerSounds.maleDeath()) : super.getDeathSound();
     }
 
     @Override
@@ -122,7 +118,7 @@ public class HumanVindicatorEntity extends Vindicator {
         if (!this.level().isClientSide && hand == InteractionHand.MAIN_HAND) {
             this.level().playSound(
                     null, this.blockPosition(),
-                    this.isFemale() ? HumanIllagerSounds.femaleAmbient() : HumanIllagerSounds.maleAmbient(),
+                    this.getAmbientSound(),
                     SoundSource.HOSTILE, 1.0F, 1.0F
             );
         }

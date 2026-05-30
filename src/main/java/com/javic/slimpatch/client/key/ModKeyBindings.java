@@ -3,10 +3,12 @@ package com.javic.slimpatch.client.key;
 import com.javic.slimpatch.SlimPatch;
 import com.javic.slimpatch.dialogue.DialogueManager;
 import com.javic.slimpatch.client.gui.VillagerDialogueScreen;
+import com.javic.slimpatch.network.DialogueStatePacket;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.npc.Villager;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -18,6 +20,13 @@ import org.lwjgl.glfw.GLFW;
 public class ModKeyBindings {
 
     public static KeyMapping OPEN_DIALOGUE;
+
+    public static Component getOpenDialogueKeyMessage() {
+        if (OPEN_DIALOGUE != null) {
+            return OPEN_DIALOGUE.getTranslatedKeyMessage();
+        }
+        return InputConstants.Type.KEYSYM.getOrCreate(GLFW.GLFW_KEY_R).getDisplayName();
+    }
 
     @SubscribeEvent
     public static void onRegisterKeys(RegisterKeyMappingsEvent event) {
@@ -39,6 +48,7 @@ public class ModKeyBindings {
                 if (mc.hitResult.getType() == net.minecraft.world.phys.HitResult.Type.ENTITY) {
                     if (((net.minecraft.world.phys.EntityHitResult) mc.hitResult).getEntity() instanceof Villager villager) {
                         DialogueManager.startDialogue(villager, player);
+                        net.neoforged.neoforge.network.PacketDistributor.sendToServer(new DialogueStatePacket(villager.getId(), true));
 
                         mc.setScreen(new VillagerDialogueScreen(villager));
                     }

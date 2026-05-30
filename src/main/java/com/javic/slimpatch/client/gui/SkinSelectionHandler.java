@@ -8,18 +8,38 @@ import net.minecraft.server.level.ServerLevel;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
-import net.neoforged.fml.loading.FMLEnvironment;
 
 public class SkinSelectionHandler {
 
     private static boolean checked = false;
+    private static boolean published = false;
 
     @SubscribeEvent
     public static void onClientTick(ClientTickEvent.Post event) {
         Minecraft mc = Minecraft.getInstance();
-        if (mc.player == null || mc.level == null || checked) return;
-        checked = true;
+        if (mc.player == null || mc.level == null) return;
 
+        if (mc.getSingleplayerServer() != null) {
+            boolean isPublished = mc.getSingleplayerServer().isPublished();
+
+            if (!checked || published != isPublished) {
+                checked = true;
+                published = isPublished;
+
+                if (isPublished) {
+                    applyHostedTheme();
+                } else {
+                    applySingleplayerTheme(mc);
+                }
+            }
+
+            return;
+        }
+
+        checked = true;
+    }
+
+    private static void applySingleplayerTheme(Minecraft mc) {
         if (mc.getSingleplayerServer() != null) {
             ServerLevel serverLevel = mc.getSingleplayerServer().overworld();
             if (serverLevel != null) {
@@ -34,33 +54,29 @@ public class SkinSelectionHandler {
                     return;
                 }
 
-                String configTheme = SlimPatchConfig.SERVER.skinType.get();
-                if (configTheme != null && !configTheme.isEmpty() && !configTheme.equals(theme)) {
-                    data.setTheme(configTheme);
-                    data.setDirty();
-                    theme = configTheme;
+                if (theme != null && !theme.isEmpty()) {
+                    ClientSkinTheme.setTheme(theme);
+                } else {
+                    ClientSkinTheme.clear();
                 }
-
-                ClientSkinTheme.setTheme(theme);
             }
-            return;
         }
+    }
 
-        if (!FMLEnvironment.production) return;
+    private static void applyHostedTheme() {
         String configTheme = SlimPatchConfig.SERVER.skinType.get();
         if (configTheme != null && !configTheme.isEmpty()) {
             ClientSkinTheme.setTheme(configTheme);
         } else {
             ClientSkinTheme.setTheme("modern");
         }
-
-        System.out.println("[SlimPatch] Aplicando tema de skins desde config del servidor: " + ClientSkinTheme.getTheme());
     }
 
     @SubscribeEvent
     public static void onLogout(ClientPlayerNetworkEvent.LoggingOut event) {
         checked = false;
-        ClientSkinTheme.setTheme("");
+        published = false;
+        ClientSkinTheme.clear();
         com.javic.slimpatch.network.VillagerCooldownsStorage.clear();
     }
 }

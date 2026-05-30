@@ -1,7 +1,6 @@
 package com.javic.slimpatch.client.gui;
 
 import com.javic.slimpatch.client.ClientSkinTheme;
-import com.javic.slimpatch.config.SlimPatchConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -11,7 +10,7 @@ import net.minecraft.network.chat.Component;
 public class SkinSelectionScreen extends Screen {
 
     public SkinSelectionScreen() {
-        super(Component.literal("Villager Skin Selection"));
+        super(Component.translatable("slimpatch.screen.skin_selection.title"));
     }
 
     @Override
@@ -19,10 +18,10 @@ public class SkinSelectionScreen extends Screen {
         int centerX = this.width / 2;
         int centerY = this.height / 2;
 
-        this.addRenderableWidget(Button.builder(Component.literal("Modern"), btn -> chooseTheme("modern"))
+        this.addRenderableWidget(Button.builder(Component.translatable("slimpatch.screen.skin_selection.modern"), btn -> chooseTheme("modern"))
                 .pos(centerX - 100, centerY).size(90, 20).build());
 
-        this.addRenderableWidget(Button.builder(Component.literal("Fantasy"), btn -> chooseTheme("fantasy"))
+        this.addRenderableWidget(Button.builder(Component.translatable("slimpatch.screen.skin_selection.fantasy"), btn -> chooseTheme("fantasy"))
                 .pos(centerX + 10, centerY).size(90, 20).build());
     }
 
@@ -37,8 +36,6 @@ public class SkinSelectionScreen extends Screen {
                 data.setTheme(theme);
                 data.setGuiShown(true);
                 data.setDirty();
-                SlimPatchConfig.SERVER.skinType.set(theme);
-                SlimPatchConfig.SERVER_SPEC.save();
             }
         }
 
@@ -53,7 +50,7 @@ public class SkinSelectionScreen extends Screen {
         graphics.pose().scale(1.7f, 1.7f, 1.7f);
         int scaledX = (int) (this.width / 2 / 1.7f);
         int scaledY = (int) ((this.height / 2 - 100) / 1.7f);
-        graphics.drawCenteredString(this.font, "Select Villager Skins", scaledX, scaledY, 0xFFFF55);
+        graphics.drawCenteredString(this.font, Component.translatable("slimpatch.screen.skin_selection.heading"), scaledX, scaledY, 0xFFFF55);
         graphics.pose().popPose();
     }
 

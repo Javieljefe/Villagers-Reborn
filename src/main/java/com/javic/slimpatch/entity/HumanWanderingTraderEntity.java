@@ -1,6 +1,5 @@
 package com.javic.slimpatch.entity;
 
-import com.javic.slimpatch.SlimPatch;
 import com.javic.slimpatch.sounds.HumanVillagerSounds;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -35,7 +34,6 @@ public class HumanWanderingTraderEntity extends WanderingTrader {
 
     public HumanWanderingTraderEntity(EntityType<? extends WanderingTrader> type, Level level) {
         super(type, level);
-        SlimPatch.LOGGER.info("[SlimPatch] Constructor HumanWanderingTraderEntity llamado (level={})", level.dimension().location());
     }
 
     @Override
@@ -83,16 +81,14 @@ public class HumanWanderingTraderEntity extends WanderingTrader {
             int skinIndex = this.getRandom().nextInt(maxSkins) + 1;
             this.setSkinIndex(skinIndex);
 
-            String name = female ? "Wanderer" : "Traveler";
-            this.setCustomName(Component.literal(name));
-            this.setCustomNameVisible(true);
+            if (!this.hasCustomName()) {
+                String name = female ? "Wanderer" : "Traveler";
+                this.setCustomName(Component.literal(name));
+                this.setCustomNameVisible(true);
+            }
 
             data.putBoolean("hv_initialized", true);
         }
-
-        SlimPatch.LOGGER.info("[SlimPatch] HumanWanderingTraderEntity inicializado → gender={} skin={}",
-                isFemale() ? "female" : "male", this.getSkinIndex());
-
         return groupData;
     }
 

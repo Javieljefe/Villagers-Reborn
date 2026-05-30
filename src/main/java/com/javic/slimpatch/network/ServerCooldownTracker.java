@@ -1,7 +1,9 @@
 package com.javic.slimpatch.network;
 
-import com.javic.slimpatch.SlimPatch;
 import com.javic.slimpatch.dialogue.DialogueManager;
+import com.javic.slimpatch.entity.FemaleVillagerEntity;
+import com.javic.slimpatch.entity.MaleVillagerEntity;
+import com.javic.slimpatch.entity.VillagerCooldownData;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -11,10 +13,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
-import net.neoforged.neoforge.network.PacketDistributor;
-
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.UUID;
 
@@ -24,12 +22,10 @@ public class ServerCooldownTracker {
 
     public static void init() {
         NeoForge.EVENT_BUS.register(ServerCooldownTracker.class);
-        SlimPatch.LOGGER.info("[SlimPatch] ServerCooldownTracker registrado en NeoForge.");
     }
 
     @SubscribeEvent
     public static void onServerStarted(ServerStartedEvent event) {
-        SlimPatch.LOGGER.info("[SlimPatch] ServerCooldownTracker iniciado correctamente.");
     }
 
     @SubscribeEvent
@@ -40,44 +36,15 @@ public class ServerCooldownTracker {
         tickCounter++;
         if (tickCounter % 20 != 0) return;
 
-        Map<UUID, Map<String, Integer>> allCooldowns = new HashMap<>(VillagerCooldownsStorage.getAll());
-        if (allCooldowns.isEmpty()) return;
+        for (Map.Entry<UUID, UUID> entry : DialogueManager.getActiveDialogues().entrySet()) {
+            Villager villager = findVillagerByUUID(server, entry.getKey());
+            ServerPlayer player = server.getPlayerList().getPlayer(entry.getValue());
+            if (villager == null || player == null) continue;
 
-        Iterator<Map.Entry<UUID, Map<String, Integer>>> it = allCooldowns.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry<UUID, Map<String, Integer>> entry = it.next();
-            UUID villagerUUID = entry.getKey();
-            Map<String, Integer> cooldowns = entry.getValue();
-
-            boolean changed = false;
-            Map<String, Integer> updated = new HashMap<>();
-
-            for (Map.Entry<String, Integer> c : cooldowns.entrySet()) {
-                int oldValue = c.getValue();
-                int newValue = Math.max(0, oldValue - 1);
-                updated.put(c.getKey(), newValue);
-                if (newValue != oldValue) changed = true;
-            }
-
-            if (!changed) continue;
-
-            VillagerCooldownsStorage.setCooldowns(villagerUUID, updated);
-
-            Villager villager = findVillagerByUUID(server, villagerUUID);
-            if (villager != null) {
-                villager.getPersistentData().putInt("slimpatch_cooldown_last_tick",
-                        (int) (System.currentTimeMillis() / 1000L));
-
-                UUID playerUUID = DialogueManager.getDialoguePlayer(villager);
-                if (playerUUID != null) {
-                    ServerPlayer player = server.getPlayerList().getPlayer(playerUUID);
-                    if (player != null) {
-                        PacketDistributor.sendToPlayer(
-                                player,
-                                new VillagerCooldownsPacket(villager.getUUID(), villager.getId(), updated)
-                        );
-                    }
-                }
+            if (villager instanceof MaleVillagerEntity male) {
+                VillagerCooldownData.syncDialogueCooldownsToPlayer(male, player, male.getOptionCooldowns());
+            } else if (villager instanceof FemaleVillagerEntity female) {
+                VillagerCooldownData.syncDialogueCooldownsToPlayer(female, player, female.getOptionCooldowns());
             }
         }
     }

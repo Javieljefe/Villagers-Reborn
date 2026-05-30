@@ -15,16 +15,20 @@ public class ModEntityAttributes {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         AttributeSupplier traderAttrs = DefaultAttributes.getSupplier(EntityType.WANDERING_TRADER);
+        AttributeSupplier zombieVillagerAttrs = DefaultAttributes.getSupplier(EntityType.ZOMBIE_VILLAGER);
 
         if (traderAttrs != null) {
             try {
                 event.put(ModEntities.HUMAN_TRADER_NATURAL.get(), traderAttrs);
-                SlimPatch.LOGGER.info("[SlimPatch] Atributos asignados correctamente a HumanTraderNatural.");
             } catch (IllegalStateException e) {
-                SlimPatch.LOGGER.warn("[SlimPatch] Atributos ya estaban registrados para HumanTraderNatural, se omite duplicado.");
             }
-        } else {
-            SlimPatch.LOGGER.error("[SlimPatch] No se pudieron obtener los atributos del WanderingTrader vanilla.");
+        }
+
+        if (zombieVillagerAttrs != null) {
+            try {
+                event.put(ModEntities.HUMAN_ZOMBIE_VILLAGER.get(), zombieVillagerAttrs);
+            } catch (IllegalStateException e) {
+            }
         }
     }
 }

@@ -532,5 +532,83 @@
         "Try honesty next time."
       ]
     }
+  },
+
+  "QuestIntro": {
+    "quest_kill_zombies": {
+      "lines": [
+        "Monsters have been attacking at night. Could you defeat 10 zombies for the village?"
+      ]
+    },
+    "quest_kill_skeletons": {
+      "lines": [
+        "The skeletons have been haunting our fields. Can you take down 10 of them?"
+      ]
+    },
+    "quest_kill_ender_dragon": {
+      "lines": [
+        "The Ender Dragon still lives... Only a true hero could defeat it. Will you face it?"
+      ]
+    },
+    "quest_travel_nether": {
+      "lines": [
+        "I've heard strange sounds coming from another world. Could you travel to the Nether and come back safely?"
+      ]
+    },
+    "quest_travel_end": {
+      "lines": [
+        "We need to know what's happening beyond the End portals. Could you go there and return alive?"
+      ]
+    },
+    "quest_relationship_friend": {
+      "lines": [
+        "This village needs stronger bonds. Could you become close friends with one of us — at least 5 hearts?"
+      ]
+    },
+    "quest_tame_wolf": {
+      "lines": [
+        "We could use a loyal guardian. Could you tame a wolf to protect the village?"
+      ]
+    }
+  },
+
+  "QuestAccept": {
+    "default": {
+      "lines": [
+        "Thank you. The village will remember this.",
+        "Be careful out there, and good luck.",
+        "I knew I could count on you."
+      ]
+    }
+  },
+
+  "QuestDecline": {
+    "default": {
+      "lines": [
+        "Oh... I see. Maybe another time.",
+        "That’s alright, I’ll find someone else.",
+        "I understand. Not everyone’s ready for danger."
+      ]
+    }
+  },
+
+  "QuestComplete": {
+    "default": {
+      "lines": [
+        "You did it! Thank you for helping us!",
+        "I knew you’d succeed. The village is safer now.",
+        "You’re a true hero!"
+      ]
+    }
+  },
+
+  "QuestCancel": {
+    "default": {
+      "lines": [
+        "That’s unfortunate... I’ll have to find someone else.",
+        "So you’ve changed your mind? I understand.",
+        "Don’t worry, maybe another time."
+      ]
+    }
   }
 }

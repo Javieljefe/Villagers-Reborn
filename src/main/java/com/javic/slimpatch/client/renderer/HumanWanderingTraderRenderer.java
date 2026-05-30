@@ -1,5 +1,6 @@
 package com.javic.slimpatch.client.renderer;
 
+import com.javic.slimpatch.Config;
 import com.javic.slimpatch.client.model.HumanWanderingTraderModelMale;
 import com.javic.slimpatch.client.model.HumanWanderingTraderModelFemale;
 import com.javic.slimpatch.entity.HumanWanderingTraderEntity;
@@ -52,5 +53,10 @@ public class HumanWanderingTraderRenderer extends MobRenderer<HumanWanderingTrad
 
         super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
         poseStack.popPose();
+    }
+
+    @Override
+    protected boolean shouldShowName(HumanWanderingTraderEntity entity) {
+        return Config.VILLAGER_NAME_TAG.get() && super.shouldShowName(entity);
     }
 }

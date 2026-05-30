@@ -1,6 +1,5 @@
 package com.javic.slimpatch.item;
 
-import com.javic.slimpatch.SlimPatch;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntityType;
@@ -54,11 +53,6 @@ public class GenderedVillagerEggItem extends SpawnEggItem {
 
     @Override
     public InteractionResult useOn(UseOnContext context) {
-        SlimPatch.LOGGER.info("[SlimPatch] Huevo {} usado en posición {} en dimensión {}",
-                isMale ? "male" : "female",
-                context.getClickedPos(),
-                context.getLevel().dimension().location());
-
         return super.useOn(context);
     }
 }

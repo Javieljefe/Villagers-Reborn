@@ -1,6 +1,7 @@
 package com.javic.slimpatch.network;
 
 import com.javic.slimpatch.SlimPatch;
+import com.javic.slimpatch.dialogue.DialogueManager;
 import com.javic.slimpatch.entity.FemaleVillagerEntity;
 import com.javic.slimpatch.entity.MaleVillagerEntity;
 import net.minecraft.network.FriendlyByteBuf;
@@ -13,6 +14,8 @@ import net.minecraft.world.entity.Entity;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
 public class GiftPacket implements CustomPacketPayload {
+
+    private static final double MAX_GIFT_DISTANCE_SQR = 64.0D;
 
     private final int entityId;
 
@@ -46,6 +49,9 @@ public class GiftPacket implements CustomPacketPayload {
             if (!(ctx.player() instanceof ServerPlayer player)) return;
             ServerLevel level = player.serverLevel();
             Entity entity = level.getEntity(msg.entityId);
+            if (!(entity instanceof net.minecraft.world.entity.npc.Villager villager)) return;
+            if (player.distanceToSqr(villager) > MAX_GIFT_DISTANCE_SQR) return;
+            if (!player.getUUID().equals(DialogueManager.getDialoguePlayer(villager))) return;
             if (entity instanceof MaleVillagerEntity male) {
                 male.giveGiftToPlayer(player);
             } else if (entity instanceof FemaleVillagerEntity female) {

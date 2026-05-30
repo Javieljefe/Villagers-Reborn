@@ -1,134 +1,170 @@
 package com.javic.slimpatch.entity;
 
-import net.minecraft.core.Holder;
-import net.minecraft.core.Registry;
+import com.javic.slimpatch.config.GiftPoolConfig;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.alchemy.Potions;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.Enchantments;
 
 public class GiftReactionHandler {
 
-    @SuppressWarnings("unchecked")
-    private static Registry<Enchantment> getEnchantmentRegistry() {
-        return (Registry<Enchantment>) BuiltInRegistries.REGISTRY.get(Registries.ENCHANTMENT.location());
-    }
-
     public static ItemStack getRandomGift(VillagerPersonality personality, RandomSource random) {
-        var enchantRegistry = getEnchantmentRegistry();
+        GiftPoolConfig.GiftSlot slot = rollSlot(random);
 
         switch (personality) {
             case FRIENDLY -> {
-                float roll = random.nextFloat();
-                if (roll < 0.40f) return new ItemStack(Items.BREAD, random.nextInt(5) + 2);
-                else if (roll < 0.65f) return new ItemStack(Items.CAKE);
-                else if (roll < 0.83f) return new ItemStack(Items.EMERALD, random.nextInt(5) + 1);
-                else if (roll < 0.93f) return new ItemStack(Items.HONEY_BOTTLE, random.nextInt(3) + 1);
-                else return new ItemStack(Items.GOLDEN_APPLE, random.nextInt(3) + 1);
+                return switch (slot) {
+                    case COMMON -> stack(personality, slot, random.nextInt(5) + 2);
+                    case UNCOMMON -> stack(personality, slot, 1);
+                    case RARE -> stack(personality, slot, random.nextInt(5) + 1);
+                    case VERY_RARE -> stack(personality, slot, random.nextInt(3) + 1);
+                    case LEGENDARY -> stack(personality, slot, random.nextInt(3) + 1);
+                };
             }
-
             case MEAN -> {
-                float roll = random.nextFloat();
-                if (roll < 0.40f) return new ItemStack(Items.ROTTEN_FLESH, random.nextInt(4) + 2);
-                else if (roll < 0.65f) return new ItemStack(Items.COAL, random.nextInt(7) + 4);
-                else if (roll < 0.83f) return new ItemStack(Items.TNT, random.nextInt(5) + 1);
-                else if (roll < 0.93f) return new ItemStack(Items.IRON_INGOT, random.nextInt(6) + 1);
-                else return new ItemStack(Items.NETHERITE_SCRAP, random.nextInt(3) + 1);
+                return switch (slot) {
+                    case COMMON -> stack(personality, slot, random.nextInt(4) + 2);
+                    case UNCOMMON -> stack(personality, slot, random.nextInt(7) + 4);
+                    case RARE -> stack(personality, slot, random.nextInt(5) + 1);
+                    case VERY_RARE -> stack(personality, slot, random.nextInt(6) + 1);
+                    case LEGENDARY -> stack(personality, slot, random.nextInt(4) + 1);
+                };
             }
-
             case SHY -> {
-                float roll = random.nextFloat();
-                if (roll < 0.40f) return new ItemStack(Items.PUMPKIN_PIE, random.nextInt(2) + 1);
-                else if (roll < 0.65f) return new ItemStack(Items.APPLE, random.nextInt(5) + 2);
-                else if (roll < 0.83f) return new ItemStack(Items.HONEY_BOTTLE, random.nextInt(3) + 1);
-                else if (roll < 0.93f) return new ItemStack(Items.DIAMOND, random.nextInt(2) + 1);
-                else {
-                    ItemStack potionStack = new ItemStack(Items.POTION, random.nextInt(2) + 1);
-                    potionStack.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.INVISIBILITY));
-                    return potionStack;
-                }
+                return switch (slot) {
+                    case COMMON -> stack(personality, slot, random.nextInt(2) + 1);
+                    case UNCOMMON -> stack(personality, slot, random.nextInt(5) + 2);
+                    case RARE -> stack(personality, slot, random.nextInt(3) + 1);
+                    case VERY_RARE -> stack(personality, slot, random.nextInt(2) + 1);
+                    case LEGENDARY -> shyLegendaryGift(random);
+                };
             }
-
             case BRAVE -> {
-                float roll = random.nextFloat();
-                if (roll < 0.40f) return new ItemStack(Items.ARROW, random.nextInt(11) + 5);
-                else if (roll < 0.65f) return new ItemStack(Items.SHIELD);
-                else if (roll < 0.83f) {
-                    if (random.nextBoolean()) {
-                        ItemStack potionStack = new ItemStack(Items.POTION, random.nextInt(3) + 1);
-                        potionStack.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.STRENGTH));
-                        return potionStack;
-                    } else {
-                        ItemStack potionStack = new ItemStack(Items.POTION, random.nextInt(3) + 1);
-                        potionStack.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.FIRE_RESISTANCE));
-                        return potionStack;
-                    }
-                } else if (roll < 0.93f) return new ItemStack(Items.DIAMOND_SWORD);
-                else return new ItemStack(Items.TOTEM_OF_UNDYING);
+                return switch (slot) {
+                    case COMMON -> stack(personality, slot, random.nextInt(11) + 5);
+                    case UNCOMMON -> stack(personality, slot, 1);
+                    case RARE -> braveRareGift(random);
+                    case VERY_RARE -> stack(personality, slot, 1);
+                    case LEGENDARY -> stack(personality, slot, 1);
+                };
             }
-
             case GRUMPY -> {
-                float roll = random.nextFloat();
-                if (roll < 0.40f) return new ItemStack(Items.POTATO, random.nextInt(6) + 3);
-                else if (roll < 0.65f) return new ItemStack(Items.IRON_INGOT, random.nextInt(3) + 1);
-                else if (roll < 0.83f) return new ItemStack(Items.EMERALD, random.nextInt(3) + 1);
-                else if (roll < 0.93f) return new ItemStack(Items.ENDER_PEARL, random.nextInt(4) + 1);
-                else {
-                    ItemStack[] armorPieces = {
-                        new ItemStack(Items.DIAMOND_HELMET),
-                        new ItemStack(Items.DIAMOND_CHESTPLATE),
-                        new ItemStack(Items.DIAMOND_LEGGINGS),
-                        new ItemStack(Items.DIAMOND_BOOTS)
-                    };
-                    return armorPieces[random.nextInt(armorPieces.length)];
-                }
+                return switch (slot) {
+                    case COMMON -> stack(personality, slot, random.nextInt(6) + 3);
+                    case UNCOMMON -> stack(personality, slot, random.nextInt(3) + 1);
+                    case RARE -> stack(personality, slot, random.nextInt(3) + 1);
+                    case VERY_RARE -> stack(personality, slot, random.nextInt(4) + 1);
+                    case LEGENDARY -> grumpyLegendaryGift(random);
+                };
             }
-
             case GREEDY -> {
-                float roll = random.nextFloat();
-                if (roll < 0.40f) return new ItemStack(Items.COPPER_INGOT, random.nextInt(3) + 2);
-                else if (roll < 0.65f) return new ItemStack(Items.GOLD_NUGGET, random.nextInt(7) + 3);
-                else if (roll < 0.83f) return new ItemStack(Items.GOLD_INGOT, random.nextInt(3) + 1);
-                else if (roll < 0.93f) return new ItemStack(Items.EMERALD, random.nextInt(6) + 1);
-                else return new ItemStack(Items.DIAMOND, random.nextInt(3) + 1);
+                return switch (slot) {
+                    case COMMON -> stack(personality, slot, random.nextInt(3) + 2);
+                    case UNCOMMON -> stack(personality, slot, random.nextInt(7) + 3);
+                    case RARE -> stack(personality, slot, random.nextInt(3) + 1);
+                    case VERY_RARE -> stack(personality, slot, random.nextInt(6) + 1);
+                    case LEGENDARY -> stack(personality, slot, random.nextInt(3) + 1);
+                };
             }
-
             case ROMANTIC -> {
-                float roll = random.nextFloat();
-                if (roll < 0.40f)
-                    return new ItemStack(random.nextBoolean() ? Items.PINK_TULIP : Items.POPPY, random.nextInt(3) + 1);
-                else if (roll < 0.65f) return new ItemStack(Items.APPLE, random.nextInt(6) + 3);
-                else if (roll < 0.83f) return new ItemStack(Items.EMERALD, random.nextInt(5) + 2);
-                else if (roll < 0.93f) return new ItemStack(Items.BLAZE_POWDER, random.nextInt(4) + 1);
-                else return new ItemStack(Items.HEART_OF_THE_SEA);
+                return switch (slot) {
+                    case COMMON -> romanticCommonGift(random);
+                    case UNCOMMON -> stack(personality, slot, random.nextInt(6) + 3);
+                    case RARE -> stack(personality, slot, random.nextInt(5) + 2);
+                    case VERY_RARE -> stack(personality, slot, random.nextInt(4) + 1);
+                    case LEGENDARY -> stack(personality, slot, 1);
+                };
             }
-
             case WISE -> {
-                float roll = random.nextFloat();
-                if (roll < 0.40f) return new ItemStack(Items.BOOK, random.nextInt(8) + 1);
-                else if (roll < 0.65f) return new ItemStack(Items.LAPIS_LAZULI, random.nextInt(9) + 4);
-                else if (roll < 0.83f) {
-                    ItemStack potionStack = new ItemStack(Items.POTION, random.nextInt(3) + 1);
-                    potionStack.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.FIRE_RESISTANCE));
-                    return potionStack;
-                } else if (roll < 0.93f) {
-                    ItemStack potionStack = new ItemStack(Items.POTION, random.nextInt(3) + 1);
-                    potionStack.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.REGENERATION));
-                    return potionStack;
-                } else {
-                    return new ItemStack(Items.SHULKER_SHELL, 1);
-                }
+                return switch (slot) {
+                    case COMMON -> stack(personality, slot, random.nextInt(8) + 1);
+                    case UNCOMMON -> stack(personality, slot, random.nextInt(9) + 4);
+                    case RARE -> wiseRareGift(random);
+                    case VERY_RARE -> wiseVeryRareGift(random);
+                    case LEGENDARY -> stack(personality, slot, 1);
+                };
             }
-
             default -> {
                 return new ItemStack(Items.COOKIE);
             }
         }
+    }
+
+    private static GiftPoolConfig.GiftSlot rollSlot(RandomSource random) {
+        float roll = random.nextFloat();
+        if (roll < 0.42f) return GiftPoolConfig.GiftSlot.COMMON;
+        if (roll < 0.69f) return GiftPoolConfig.GiftSlot.UNCOMMON;
+        if (roll < 0.86f) return GiftPoolConfig.GiftSlot.RARE;
+        if (roll < 0.95f) return GiftPoolConfig.GiftSlot.VERY_RARE;
+        return GiftPoolConfig.GiftSlot.LEGENDARY;
+    }
+
+    private static ItemStack stack(VillagerPersonality personality, GiftPoolConfig.GiftSlot slot, int count) {
+        return new ItemStack(GiftPoolConfig.getItem(personality, slot), count);
+    }
+
+    private static ItemStack shyLegendaryGift(RandomSource random) {
+        Item item = GiftPoolConfig.getItem(VillagerPersonality.SHY, GiftPoolConfig.GiftSlot.LEGENDARY);
+        if (item != Items.POTION) {
+            return new ItemStack(item, random.nextInt(2) + 1);
+        }
+        ItemStack potionStack = new ItemStack(Items.POTION, random.nextInt(2) + 1);
+        potionStack.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.INVISIBILITY));
+        return potionStack;
+    }
+
+    private static ItemStack braveRareGift(RandomSource random) {
+        Item item = GiftPoolConfig.getItem(VillagerPersonality.BRAVE, GiftPoolConfig.GiftSlot.RARE);
+        if (item != Items.POTION) {
+            return new ItemStack(item, random.nextInt(3) + 1);
+        }
+        ItemStack potionStack = new ItemStack(Items.POTION, random.nextInt(3) + 1);
+        potionStack.set(DataComponents.POTION_CONTENTS, new PotionContents(random.nextBoolean() ? Potions.STRENGTH : Potions.FIRE_RESISTANCE));
+        return potionStack;
+    }
+
+    private static ItemStack grumpyLegendaryGift(RandomSource random) {
+        Item item = GiftPoolConfig.getItem(VillagerPersonality.GRUMPY, GiftPoolConfig.GiftSlot.LEGENDARY);
+        if (item != Items.DIAMOND_CHESTPLATE) {
+            return new ItemStack(item);
+        }
+        ItemStack[] armorPieces = {
+                new ItemStack(Items.DIAMOND_HELMET),
+                new ItemStack(Items.DIAMOND_CHESTPLATE),
+                new ItemStack(Items.DIAMOND_LEGGINGS),
+                new ItemStack(Items.DIAMOND_BOOTS)
+        };
+        return armorPieces[random.nextInt(armorPieces.length)];
+    }
+
+    private static ItemStack romanticCommonGift(RandomSource random) {
+        Item item = GiftPoolConfig.getItem(VillagerPersonality.ROMANTIC, GiftPoolConfig.GiftSlot.COMMON);
+        if (item != Items.POPPY) {
+            return new ItemStack(item, random.nextInt(3) + 1);
+        }
+        return new ItemStack(random.nextBoolean() ? Items.PINK_TULIP : Items.POPPY, random.nextInt(3) + 1);
+    }
+
+    private static ItemStack wiseRareGift(RandomSource random) {
+        Item item = GiftPoolConfig.getItem(VillagerPersonality.WISE, GiftPoolConfig.GiftSlot.RARE);
+        if (item != Items.POTION) {
+            return new ItemStack(item, random.nextInt(3) + 1);
+        }
+        ItemStack potionStack = new ItemStack(Items.POTION, random.nextInt(3) + 1);
+        potionStack.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.FIRE_RESISTANCE));
+        return potionStack;
+    }
+
+    private static ItemStack wiseVeryRareGift(RandomSource random) {
+        Item item = GiftPoolConfig.getItem(VillagerPersonality.WISE, GiftPoolConfig.GiftSlot.VERY_RARE);
+        if (item != Items.POTION) {
+            return new ItemStack(item, random.nextInt(3) + 1);
+        }
+        ItemStack potionStack = new ItemStack(Items.POTION, random.nextInt(3) + 1);
+        potionStack.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.REGENERATION));
+        return potionStack;
     }
 }
