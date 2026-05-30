@@ -1,25 +1,22 @@
 
-Installation information
-=======
+# Villagers Reborn
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+**Villagers Reborn** replaces vanilla villagers with human models while keeping their usual jobs, trades, and behavior.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+You can build relationships with villagers, start dating, get married, and start a family!
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+Also includes villager names, personalities, custom equipment, and a dialogue system.
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+Works in any existing world and is compatible with most mods that add custom trades or professions.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+It also replaces other mobs such as illagers, witches, and the wandering trader with human models.
+
+--------
+
+Here you can check the **[Skin Credits](https://github.com/Javieljefe/Villagers-Reborn/blob/main/SKIN_CREDITS.md)**
+
+-------
+
+CurseForge: https://www.curseforge.com/minecraft/mc-mods/villagers-reborn
+
+Modrinth: https://modrinth.com/mod/villagers-reborn
